@@ -1,0 +1,34 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="theme-color" content="#111111" />
+		
+		<!-- On utilise le chemin classique du manifest généré par le plugin -->
+		<link rel="manifest" href="/manifest.webmanifest" />
+	</head>
+	<body>
+		<slot />
+
+		<!-- Le script registerSW.js est généré automatiquement par l'intégration dans le dossier public au build -->
+		<script is:inline src="/registerSW.js"></script>
+	</body>
+</html>
+
+<style is:global>
+	:root { --accent: #4CAF50; }
+	html { font-family: system-ui, sans-serif; background: #111111; color: white; }
+	body { margin: 0; padding: 20px; }
+</style>
