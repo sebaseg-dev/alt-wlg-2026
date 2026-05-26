@@ -1,5 +1,10 @@
 ---
+import type { Day } from '../types/timetable';
 import normaliseTime from '../utilities/normaliseTime';
+
+interface Props {
+	dayData: Day;
+}
 
 const { dayData } = Astro.props;
 

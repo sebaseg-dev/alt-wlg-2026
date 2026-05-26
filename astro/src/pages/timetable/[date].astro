@@ -1,7 +1,12 @@
 ---
+import type { Day } from '../../types/timetable';
 import Layout from '../../layouts/Layout.astro';
 import data from '../../data/data.json';
 import TimetableGrid from '../../components/TimetableGrid.astro';
+
+interface Props {
+    initialData: Day;
+}
 
 export function getStaticPaths() {
     return data.map(day => ({

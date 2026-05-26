@@ -29,3 +29,9 @@ export interface Day {
 }
 
 export type TimetableData = Day[];
+
+export interface EnrichedEvent extends TimetableEvent {
+    startDecimal: number;
+    endDecimal: number;
+    durationQuarters: number;
+}
