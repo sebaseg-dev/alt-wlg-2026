@@ -2,22 +2,138 @@
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<link rel="manifest" href="/manifest.webmanifest" />
-		<meta name="theme-color" content="#111111" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	</head>
-	<body>
-		<h1>Astro</h1>
-		<script is:inline src="/registerSW.js"></script>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>We Love Green 2026 - Timetable</title>
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="theme-color" content="#111111" />
+        <style>
+            body { background: #111111; color: white; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+            .day { margin-bottom: 30px; }
+            .stage { margin-left: 20px; }
+            .event { margin: 5px 0; padding: 5px; background: #222; border-radius: 4px; }
+        </style>
+    </head>
+    <body>
+        <h1>We Love Green 2026 - Timetable</h1>
+        <div id="offline-indicator">⚠️ Mode hors ligne - Données en cache</div>
+            <h1>We Love Green 2026</h1>
+            <div id="timetable"><p class="loading">Chargement en cours...</p></div>
+        
+            <script is:inline>
+              // Fonction pour charger les données depuis le cache du SW
+              async function fetchFromCache(url) {
+                try {
+                  const cache = await caches.open('data-cache');
+                  const cachedResponse = await cache.match(url);
+                  if (cachedResponse) {
+                    return await cachedResponse.json();
+                  }
+                } catch (error) {
+                  console.error('Erreur lors de la lecture du cache:', error);
+                }
+                return null;
+              }
+        
+              // Fonction pour afficher le timetable
+              function renderTimetable(data) {
+                const container = document.getElementById('timetable');
+                if (!data || data.length === 0) {
+                  container.innerHTML = '<p class="loading">Aucune donnée disponible.</p>';
+                  return;
+                }
+        
+                container.innerHTML = data.map(day => `
+                  <div class="day-container">
+                    <div class="day-header">
+                      <div class="day-label">${day.label}</div>
+                      <div class="last-metro">Dernier métro: ${day.last_metro}</div>
+                    </div>
+                    ${day.scenes.map(scene => `
+                      <div class="scene">
+                        <div class="scene-name">${scene.name}</div>
+                        ${scene.lineup.map(event => `
+                          <div class="event">
+                            <span class="time">${event.start_time} - ${event.end_time}</span>
+                            <span class="artist">${event.artist}</span>
+                          </div>
+                        `).join('')}
+                      </div>
+                    `).join('')}
+                  </div>
+                `).join('');
+              }
+        
+              // Charge les données
+              async function loadData() {
+                try {
+                  console.log('🔍 Tentative de chargement de /data.json (réseau)...');
+                  const response = await fetch('/data.json');
+        
+                  if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                  }
+        
+                  const data = await response.json();
+                  console.log('✅ Données chargées depuis le réseau');
+                  renderTimetable(data);
+                  localStorage.setItem('timetableData', JSON.stringify(data));
+                } catch (error) {
+                  console.error('❌ Échec du chargement depuis le réseau:', error);
+        
+                  // 1. Essaie de charger depuis le cache du SW
+                  console.log('🔍 Tentative de chargement depuis le cache SW...');
+                  const cachedData = await fetchFromCache('/data.json');
+                  if (cachedData) {
+                    console.log('✅ Données chargées depuis le cache SW');
+                    renderTimetable(cachedData);
+                    localStorage.setItem('timetableData', JSON.stringify(cachedData));
+                    return;
+                  }
+        
+                  // 2. Essaie localStorage
+                  console.log('🔍 Tentative de chargement depuis localStorage...');
+                  const storedData = localStorage.getItem('timetableData');
+                  if (storedData) {
+                    console.log('⚠️ Données chargées depuis localStorage');
+                    renderTimetable(JSON.parse(storedData));
+                    return;
+                  }
+        
+                  // 3. Aucune donnée disponible
+                  console.error('❌ Aucune donnée disponible (réseau, cache SW ou localStorage)');
+                  document.getElementById('timetable').innerHTML = '<p class="loading">Erreur : impossible de charger les données.</p>';
+                }
+              }
+        
+              // Écoute les changements de connexion
+              window.addEventListener('online', () => {
+                document.getElementById('offline-indicator').style.display = 'none';
+                loadData(); // Recharge les données si la connexion revient
+              });
+        
+              window.addEventListener('offline', () => {
+                document.getElementById('offline-indicator').style.display = 'block';
+              });
+        
+              // Vérifie la connexion au chargement
+              if (!navigator.onLine) {
+                document.getElementById('offline-indicator').style.display = 'block';
+              }
+        
+              // Charge les données au démarrage
+              loadData();
+        
+              // Code pour tester l'installation PWA
+              let deferredPrompt;
+              window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                console.log('📱 PWA installable ! beforeinstallprompt déclenché.');
+              });
+            </script>
+        
 		<script is:inline>
             // Écoute l'événement beforeinstallprompt (nécessaire pour l'installation)
             let deferredPrompt;
@@ -54,5 +170,5 @@
                 console.log('✅ App installée avec succès !');
             });
         </script>
-	</body>
+  </body>
 </html>
