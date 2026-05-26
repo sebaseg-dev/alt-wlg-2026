@@ -10,8 +10,49 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<meta name="theme-color" content="#111111" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<script is:inline src="/registerSW.js"></script>
+		<script is:inline>
+            // Écoute l'événement beforeinstallprompt (nécessaire pour l'installation)
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                // Empêche Chrome de masquer automatiquement le prompt
+                e.preventDefault();
+                // Stocke l'événement pour plus tard
+                deferredPrompt = e;
+                console.log('📱 PWA installable ! beforeinstallprompt déclenché.');
+            
+                // Affiche un bouton manuel pour tester (optionnel)
+                const installButton = document.createElement('button');
+                installButton.textContent = 'Installer l\'app';
+                installButton.style.position = 'fixed';
+                installButton.style.bottom = '20px';
+                installButton.style.right = '20px';
+                installButton.style.zIndex = '9999';
+                installButton.addEventListener('click', () => {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                    console.log('🎉 Utilisateur a accepté l\'installation !');
+                    } else {
+                    console.log('❌ Utilisateur a refusé l\'installation.');
+                    }
+                    deferredPrompt = null;
+                });
+                });
+                document.body.appendChild(installButton);
+            });
+            
+            // Vérifie si l'app est déjà installée
+            window.addEventListener('appinstalled', (evt) => {
+                console.log('✅ App installée avec succès !');
+            });
+        </script>
 	</body>
 </html>
