@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import data from '../../data/data.json';
+
+export function getStaticPaths() {
+    return data.map(day => ({
+        params: { date: day.date },
+        props: { initialData: day }
+    }))
+}
+
+const { initialData } = Astro.props;
+---
+<Layout title={`Timetable – ${initialData.label}`}>
+    <div id="timetable-root">
+        This is the timetable root<br/>
+        Nous sommes le {initialData.label}
+    </div>
+</Layout>
