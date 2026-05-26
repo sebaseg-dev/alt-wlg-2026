@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import data from '../../data/data.json';
+import TimetableGrid from '../../components/TimetableGrid.astro';
 
 export function getStaticPaths() {
     return data.map(day => ({
@@ -14,6 +15,8 @@ const { initialData } = Astro.props;
 <Layout title={`Timetable – ${initialData.label}`}>
     <div id="timetable-root">
         This is the timetable root<br/>
-        Nous sommes le {initialData.label}
+        Nous sommes le {initialData.label}<br/>
+        Here is my grid:<br/>
+        <TimetableGrid dayData={initialData} />
     </div>
 </Layout>

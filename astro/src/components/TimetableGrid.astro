@@ -1,0 +1,37 @@
+---
+import normaliseTime from '../utilities/normaliseTime';
+
+const { dayData } = Astro.props;
+
+const enrichedScenes = dayData.scenes.map(scene => {
+    return {
+        ...scene,
+        lineup: scene.lineup.map(event => {
+            const start = normaliseTime(event.start_time);
+            const end = normaliseTime(event.end_time);
+            return {
+                ...event,
+                startDecimal: start,
+                endDecimal: end,
+                durationQuarters: (end - start) * 4,
+            };
+        })
+    }
+})
+
+const allDecimalTimes = enrichedScenes.flatMap(scene => scene.lineup.flatMap(event => [event.startDecimal, event.endDecimal]));
+const minTime = Math.min(...allDecimalTimes);
+const maxTime = Math.max(...allDecimalTimes);
+const totalQuarters = (maxTime - minTime) * 4;
+
+---
+
+<div>
+    <p>Le premier concert du jour démarre à : {minTime} </p>
+    <p>Le dernier concert du jour termine à : {maxTime}</p>
+    <p>La journée dure (en quarts d'heures) : {totalQuarters}</p>
+</div>
+
+<pre>
+    { JSON.stringify(enrichedScenes) }
+</pre>
