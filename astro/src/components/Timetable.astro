@@ -1,51 +1,50 @@
 ---
 // Props : optionnel, tu peux passer des données directement si tu veux un rendu côté serveur
-// Mais ici on va tout gérer côté client pour la PWA
+// Mais ici on gère le chargement et le rafraîchissement dynamique côté client pour la PWA
 ---
 
 <div id="timetable-container">
-  <div id="offline-indicator" style="display: none; background: #ff5252; color: white; padding: 10px; text-align: center; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
-    ⚠️ Mode hors ligne - Données en cache
+  <div id="offline-indicator">
+    ⚠️ Mode hors ligne - Données locales (les mises à jour reprendront au retour du réseau)
   </div>
-  <div id="timetable"><p style="text-align: center; padding: 40px; color: #aaa;">Chargement en cours...</p></div>
+  
+  <div id="timetable">
+    <p class="loading">Chargement du line-up en cours...</p>
+  </div>
 </div>
 
-<script is:inline>
-  // Fonction pour charger les données depuis le cache du SW
-  async function fetchFromCache(url) {
-    try {
-      const cache = await caches.open('data-cache-v1'); // Utilise le nom de cache de ta config Workbox
-      const cachedResponse = await cache.match(url);
-      if (cachedResponse) {
-        return await cachedResponse.json();
-      }
-    } catch (error) {
-      console.error('Erreur lors de la lecture du cache:', error);
-    }
-    return null;
-  }
+<script>
+  // 1. Importation du nouveau service optimisé
+  import { getTimetableData } from '../data/dataService';
 
-  // Fonction pour afficher le timetable
+  // Sélection des éléments du DOM indispensables
+  const timetableEl = document.getElementById('timetable');
+  const offlineIndicatorEl = document.getElementById('offline-indicator');
+
+  /**
+   * Fonction de rendu HTML (Génère la structure propre à partir du JSON)
+   */
   function renderTimetable(data) {
-    const container = document.getElementById('timetable');
+    if (!timetableEl) return;
+    
     if (!data || data.length === 0) {
-      container.innerHTML = '<p style="text-align: center; padding: 40px; color: #aaa;">Aucune donnée disponible.</p>';
+      timetableEl.innerHTML = '<p class="error">Aucune donnée disponible pour le moment.</p>';
       return;
     }
 
-    container.innerHTML = data.map(day => `
-      <div class="day-container" style="margin-bottom: 40px; border-bottom: 1px solid #444; padding-bottom: 20px;">
-        <div class="day-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-          <div class="day-label" style="font-size: 1.5rem; font-weight: bold;">${day.label}</div>
-          <div class="last-metro" style="font-size: 0.9rem; color: #aaa; font-style: italic;">Dernier métro: ${day.last_metro}</div>
+    timetableEl.innerHTML = data.map(day => `
+      <div class="day-container">
+        <div class="day-header">
+          <div class="day-label">${day.label}</div>
+          <div class="last-metro">Dernier métro : ${day.last_metro}</div>
         </div>
         ${day.scenes.map(scene => `
-          <div class="scene" style="margin-bottom: 25px; background: #222; border-radius: 8px; padding: 15px;">
-            <div class="scene-name" style="font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #4CAF50; border-bottom: 1px solid #444; padding-bottom: 5px;">${scene.name}</div>
+          <div class="scene">
+            <div class="scene-name">${scene.name}</div>
             ${scene.lineup.map(event => `
-              <div class="event" style="display: flex; justify-content: space-between; padding: 8px 12px; margin: 5px 0; background: #333; border-radius: 4px;">
-                <span class="time" style="color: #aaa; font-size: 0.9rem;">${event.start_time} - ${event.end_time}</span>
-                <span class="artist" style="font-weight: bold;">${event.artist}</span>
+              <div class="event" data-type="${event.type}">
+                <span class="time">${event.start_time} - ${event.end_time}</span>
+                <span class="artist">${event.artist} ${event.type === 'talk' ? '🗣️' : ''}</span>
               </div>
             `).join('')}
           </div>
@@ -54,69 +53,71 @@
     `).join('');
   }
 
-  // Charge les données
-  async function loadData() {
-    try {
-      console.log('🔍 Tentative de chargement de /data.json (réseau)...');
-      const response = await fetch('/data.json');
+  /**
+   * Initialisation et gestion du cycle de vie des données
+   */
+  async function init() {
+    // Gestion de l'indicateur offline au démarrage
+    toggleOfflineIndicator(!navigator.onLine);
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+    // On appelle notre service. 
+    // On lui passe un callback (freshData) => { ... } : si le service découvre une mise à jour 
+    // sur le réseau en arrière-plan, il appellera automatiquement cette fonction pour rafraîchir l'écran !
+    const data = await getTimetableData((freshData) => {
+      console.log('⚡ UI mise à jour de manière fluide avec les dernières modifications du serveur !');
+      renderTimetable(freshData);
+    });
 
-      const data = await response.json();
-      console.log('✅ Données chargées depuis le réseau');
-      renderTimetable(data);
-      localStorage.setItem('timetableData', JSON.stringify(data));
-    } catch (error) {
-      console.error('❌ Échec du chargement depuis le réseau:', error);
+    // Rendu initial (affiche immédiatement le cache ou le localStorage)
+    renderTimetable(data);
+  }
 
-      // 1. Essaie de charger depuis le cache du SW
-      console.log('🔍 Tentative de chargement depuis le cache SW...');
-      const cachedData = await fetchFromCache('/data.json');
-      if (cachedData) {
-        console.log('✅ Données chargées depuis le cache SW');
-        renderTimetable(cachedData);
-        localStorage.setItem('timetableData', JSON.stringify(cachedData));
-        return;
-      }
-
-      // 2. Essaie localStorage
-      console.log('🔍 Tentative de chargement depuis localStorage...');
-      const storedData = localStorage.getItem('timetableData');
-      if (storedData) {
-        console.log('⚠️ Données chargées depuis localStorage');
-        renderTimetable(JSON.parse(storedData));
-        return;
-      }
-
-      // 3. Aucune donnée disponible
-      console.error('❌ Aucune donnée disponible (réseau, cache SW ou localStorage)');
-      document.getElementById('timetable').innerHTML = '<p style="text-align: center; padding: 40px; color: #aaa;">Erreur : impossible de charger les données.</p>';
+  /**
+   * Gère l'affichage de la barre d'alerte hors-ligne
+   */
+  function toggleOfflineIndicator(isOffline) {
+    if (offlineIndicatorEl) {
+      offlineIndicatorEl.style.display = isOffline ? 'block' : 'none';
     }
   }
 
-  // Écoute les changements de connexion
+  // Écouteurs d'événements réseau standards du navigateur
   window.addEventListener('online', () => {
-    document.getElementById('offline-indicator').style.display = 'none';
-    loadData(); // Recharge les données si la connexion revient
+    toggleOfflineIndicator(false);
+    init(); // Relance la machine pour revalider les données sur le réseau
   });
 
   window.addEventListener('offline', () => {
-    document.getElementById('offline-indicator').style.display = 'block';
+    toggleOfflineIndicator(true);
   });
 
-  // Vérifie la connexion au chargement
-  if (!navigator.onLine) {
-    document.getElementById('offline-indicator').style.display = 'block';
-  }
-
-  // Charge les données au démarrage
-  loadData();
+  // Lancement du script au chargement de la page
+  init();
 </script>
 
 <style>
   /* Styles spécifiques au composant */
+  #offline-indicator {
+    display: none;
+    background: #ff9800; /* Orange pour être moins agressif qu'un rouge erreur */
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 0.9rem;
+  }
+
+  .loading, .error {
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+  }
+
   .day-container {
     margin-bottom: 40px;
     border-bottom: 1px solid #444;
@@ -158,7 +159,15 @@
     margin: 5px 0;
     background: #333;
     border-radius: 4px;
+    transition: background 0.2s;
   }
+  
+  /* Petit bonus UX : une couleur légèrement différente pour repérer les talks/conférences */
+  .event[data-type="talk"] {
+    border-left: 3px solid #00bcd4;
+    background: #2a353d;
+  }
+
   .time {
     color: #aaa;
     font-size: 0.9rem;
