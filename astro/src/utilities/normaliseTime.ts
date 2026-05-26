@@ -1,4 +1,4 @@
-const LATEST_CLOSING_HOUR = 3;
+import { LATEST_CLOSING_HOUR } from '../constants';
 
 export default function normaliseTime(timeString: string): number {
     const [hours, minutes] = timeString.split(':').map(Number);

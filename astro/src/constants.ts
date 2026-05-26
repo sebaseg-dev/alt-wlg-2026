@@ -1,0 +1,1 @@
+export const LATEST_CLOSING_HOUR = 3;
