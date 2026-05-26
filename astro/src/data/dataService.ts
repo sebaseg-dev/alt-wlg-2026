@@ -14,7 +14,7 @@ export async function getTimetableData(onUpdate?: (data: TimetableData) => void)
 
     // 2. Si le Cache Storage échoue, tente le LocalStorage (Backup)
     if (!localData) {
-        localData = await getDataFromLocalStorage();
+        localData = getDataFromLocalStorage();
         if (localData) console.log('✅ Données chargées depuis le localStorage (Backup)');
     } else {
         console.log('✅ Données chargées depuis Cache Storage (SW)');
