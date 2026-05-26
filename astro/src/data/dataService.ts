@@ -1,12 +1,14 @@
+import type { TimetableData } from '../types/timetable';
+
 const CACHE_NAME = 'data-cache';
 const DATA_URL = '/data.json';
 
 /**
  * Charge les données de la timetable (Stratégie Cache-First avec Revalidation en arrière-plan)
  * @param {Function} [onUpdate] - Callback optionnel pour avertir le Front qu'une mise à jour réseau a eu lieu
- * @returns {Promise<Array|null>}
+ * @returns {Promise<TimetableData|null>}
  */
-export async function getTimetableData(onUpdate) {
+export async function getTimetableData(onUpdate?: (data: TimetableData) => void): Promise<TimetableData | null> {
     // 1. Tente d'abord le Cache Storage (le plus rapide pour la PWA)
     let localData = await fetchFromCache(DATA_URL);
 
@@ -32,11 +34,11 @@ export async function getTimetableData(onUpdate) {
 /**
  * Revalidation en arrière-plan sans bloquer l'affichage de l'utilisateur
  */
-async function fetchSilentUpdate(onUpdate) {
+async function fetchSilentUpdate(onUpdate?: (data: TimetableData) => void) {
     try {
         const response = await fetch(DATA_URL);
         if (response.ok) {
-            const freshData = await response.json();
+            const freshData: TimetableData = await response.json();
             
             // Optionnel mais top : on vérifie si la donnée a vraiment changé avant de tout réécrire
             const oldDataStr = localStorage.getItem('timetableData');
@@ -61,7 +63,7 @@ async function fetchSilentUpdate(onUpdate) {
 /**
  * Charge les données depuis le Cache Storage
  */
-async function fetchFromCache(url) {
+async function fetchFromCache(url: string): Promise<TimetableData | null> {
     try {
         if (!('caches' in window)) return null; // Sécurité si vieux navigateur
         const cache = await caches.open(CACHE_NAME);
@@ -76,7 +78,7 @@ async function fetchFromCache(url) {
 /**
  * Sauvegarde dans Cache Storage
  */
-async function saveToCache(data) {
+async function saveToCache(data: TimetableData) {
     try {
         if (!('caches' in window)) return;
         const cache = await caches.open(CACHE_NAME);
@@ -91,18 +93,18 @@ async function saveToCache(data) {
 /**
  * Sauvegarde dans le Local Storage
  */
-function saveToLocalStorage(data) {
+function saveToLocalStorage(data: TimetableData) {
     try {
         localStorage.setItem('timetableData', JSON.stringify(data));
     } catch (error) {
-        console.error('Erreur lors de l\'enregistrement dans Local Storage:', error);
+        console.error("Erreur lors de l'enregistrement dans Local Storage:", error);
     }
 }
 
 /**
  * Récupère les données depuis le Local Storage
  */
-function getDataFromLocalStorage() {
+function getDataFromLocalStorage(): TimetableData | null {
     try {
         const data = localStorage.getItem('timetableData');
         return data ? JSON.parse(data) : null;
@@ -115,13 +117,13 @@ function getDataFromLocalStorage() {
 /**
  * Récupère les données depuis le réseau (uniquement si aucun cache au démarrage)
  */
-async function getDataFromNetwork() {
+async function getDataFromNetwork(): Promise<TimetableData | null> {
     try {
         console.log('🔍 Premier démarrage : Chargement obligatoire depuis le réseau...');
         const response = await fetch(DATA_URL);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-        const data = await response.json();
+        const data: TimetableData = await response.json();
         console.log('✅ Données récupérées depuis le réseau');
 
         await saveToCache(data);

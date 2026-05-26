@@ -16,6 +16,7 @@
 <script>
   // 1. Importation du nouveau service optimisé
   import { getTimetableData } from '../data/dataService';
+  import type { TimetableData } from '../types/timetable';
 
   // Sélection des éléments du DOM indispensables
   const timetableEl = document.getElementById('timetable');
@@ -24,7 +25,7 @@
   /**
    * Fonction de rendu HTML (Génère la structure propre à partir du JSON)
    */
-  function renderTimetable(data) {
+  function renderTimetable(data: TimetableData | null) {
     if (!timetableEl) return;
     
     if (!data || data.length === 0) {
@@ -63,7 +64,7 @@
     // On appelle notre service. 
     // On lui passe un callback (freshData) => { ... } : si le service découvre une mise à jour 
     // sur le réseau en arrière-plan, il appellera automatiquement cette fonction pour rafraîchir l'écran !
-    const data = await getTimetableData((freshData) => {
+    const data = await getTimetableData((freshData: TimetableData) => {
       console.log('⚡ UI mise à jour de manière fluide avec les dernières modifications du serveur !');
       renderTimetable(freshData);
     });
@@ -75,7 +76,7 @@
   /**
    * Gère l'affichage de la barre d'alerte hors-ligne
    */
-  function toggleOfflineIndicator(isOffline) {
+  function toggleOfflineIndicator(isOffline: boolean) {
     if (offlineIndicatorEl) {
       offlineIndicatorEl.style.display = isOffline ? 'block' : 'none';
     }

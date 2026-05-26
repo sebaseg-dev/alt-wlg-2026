@@ -1,3 +1,3 @@
 /// <reference types="astro/client" />
-/// <reference types="@vite-pwa/astro/info" />
-/// <reference types="@vite-pwa/astro/client" />
+/// <reference types="vite-plugin-pwa/info" />
+/// <reference types="vite-plugin-pwa/client" />

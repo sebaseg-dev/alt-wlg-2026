@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
         
             // Affiche un bouton manuel pour tester (optionnel)
             const installButton = document.createElement('button');
-            installButton.textContent = 'Installer l'app';
+            installButton.textContent = 'Installer l\'app';
             installButton.style.position = 'fixed';
             installButton.style.bottom = '20px';
             installButton.style.right = '20px';
@@ -27,9 +27,9 @@ import Layout from '../layouts/Layout.astro';
                 deferredPrompt.prompt();
                 deferredPrompt.userChoice.then((choiceResult) => {
                     if (choiceResult.outcome === 'accepted') {
-                        console.log('🎉 Utilisateur a accepté l'installation !');
+                        console.log('🎉 Utilisateur a accepté l\'installation !');
                     } else {
-                        console.log('❌ Utilisateur a refusé l'installation.');
+                        console.log('❌ Utilisateur a refusé l\'installation.');
                     }
                     deferredPrompt = null;
                 });
