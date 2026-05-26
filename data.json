@@ -1,0 +1,1055 @@
+[
+    {
+        "date": "2026-06-05",
+        "label": "Vendredi 5 Juin",
+        "scenes": [
+            {
+                "name": "LA PRAIRIE",
+                "lineup": [
+                    {
+                        "id": "luvcat",
+                        "artist": "LUVCAT",
+                        "start_time": "17:45",
+                        "end_time": "18:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "feu_chatterton",
+                        "artist": "FEU! CHATTERTON",
+                        "start_time": "19:15",
+                        "end_time": "20:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "gorillaz",
+                        "artist": "GORILLAZ",
+                        "start_time": "21:15",
+                        "end_time": "22:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "little_simz",
+                        "artist": "LITTLE SIMZ",
+                        "start_time": "23:45",
+                        "end_time": "00:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LA CLAIRIÈRE",
+                "lineup": [
+                    {
+                        "id": "sudan_archives",
+                        "artist": "SUDAN ARCHIVES",
+                        "start_time": "18:15",
+                        "end_time": "19:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "sebastien_tellier",
+                        "artist": "SÉBASTIEN TELLIER",
+                        "start_time": "20:15",
+                        "end_time": "21:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "dijon",
+                        "artist": "DIJON",
+                        "start_time": "22:45",
+                        "end_time": "23:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LA CANOPÉE",
+                "lineup": [
+                    {
+                        "id": "max_baby",
+                        "artist": "MAX BABY",
+                        "start_time": "18:30",
+                        "end_time": "19:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "jim_legxacy",
+                        "artist": "JIM LEGXACY",
+                        "start_time": "20:15",
+                        "end_time": "21:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "yoa",
+                        "artist": "YOA",
+                        "start_time": "22:45",
+                        "end_time": "23:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LALALAND",
+                "lineup": [
+                    {
+                        "id": "phelowe",
+                        "artist": "PHELOWE",
+                        "start_time": "17:00",
+                        "end_time": "18:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "laze",
+                        "artist": "LAZE",
+                        "start_time": "18:30",
+                        "end_time": "20:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "tatyana_jane",
+                        "artist": "TATYANA JANE",
+                        "start_time": "20:00",
+                        "end_time": "21:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "dj_gigola",
+                        "artist": "DJ GIGOLA",
+                        "start_time": "21:30",
+                        "end_time": "23:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "yousuke_yukimatsu",
+                        "artist": "¥ØU$UK€ ¥UK1MAT$U",
+                        "start_time": "23:30",
+                        "end_time": "01:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "THINKTANK",
+                "lineup": [
+                    {
+                        "id": "bingauche",
+                        "artist": "BINGAUCHE",
+                        "start_time": "18:00",
+                        "end_time": "19:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "etta_marcus",
+                        "artist": "ETTA MARCUS",
+                        "start_time": "20:00",
+                        "end_time": "20:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "qendresa",
+                        "artist": "QENDRESA",
+                        "start_time": "21:15",
+                        "end_time": "22:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "ades_the_planet",
+                        "artist": "ADES THE PLANET",
+                        "start_time": "23:00",
+                        "end_time": "00:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "radio_nova_djs",
+                        "artist": "RADIO NOVA DJ'S",
+                        "start_time": "00:15",
+                        "end_time": "01:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "date": "2026-06-06",
+        "label": "Samedi 6 Juin",
+        "scenes": [
+            {
+                "name": "LA PRAIRIE",
+                "lineup": [
+                    {
+                        "id": "luvcat",
+                        "artist": "LUVCAT",
+                        "start_time": "17:45",
+                        "end_time": "18:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "feu_chatterton",
+                        "artist": "FEU! CHATTERTON",
+                        "start_time": "19:15",
+                        "end_time": "20:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "gorillaz",
+                        "artist": "GORILLAZ",
+                        "start_time": "21:15",
+                        "end_time": "22:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "little_simz",
+                        "artist": "LITTLE SIMZ",
+                        "start_time": "23:45",
+                        "end_time": "00:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LA CLAIRIÈRE",
+                "lineup": [
+                    {
+                        "id": "sudan_archives",
+                        "artist": "SUDAN ARCHIVES",
+                        "start_time": "18:15",
+                        "end_time": "19:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "sebastien_tellier",
+                        "artist": "SÉBASTIEN TELLIER",
+                        "start_time": "20:15",
+                        "end_time": "21:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "dijon",
+                        "artist": "DIJON",
+                        "start_time": "22:45",
+                        "end_time": "23:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LA CANOPÉE",
+                "lineup": [
+                    {
+                        "id": "max_baby",
+                        "artist": "MAX BABY",
+                        "start_time": "18:30",
+                        "end_time": "19:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "jim_legxacy",
+                        "artist": "JIM LEGXACY",
+                        "start_time": "20:15",
+                        "end_time": "21:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "yoa",
+                        "artist": "YOA",
+                        "start_time": "22:45",
+                        "end_time": "23:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LALALAND",
+                "lineup": [
+                    {
+                        "id": "phelowe",
+                        "artist": "PHELOWE",
+                        "start_time": "17:00",
+                        "end_time": "18:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "laze",
+                        "artist": "LAZE",
+                        "start_time": "18:30",
+                        "end_time": "20:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "tatyana_jane",
+                        "artist": "TATYANA JANE",
+                        "start_time": "20:00",
+                        "end_time": "21:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "dj_gigola",
+                        "artist": "DJ GIGOLA",
+                        "start_time": "21:30",
+                        "end_time": "23:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "yousuke_yukimatsu",
+                        "artist": "¥ØU$UK€ ¥UK1MAT$U",
+                        "start_time": "23:30",
+                        "end_time": "01:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "THINKTANK",
+                "lineup": [
+                    {
+                        "id": "bingauche",
+                        "artist": "BINGAUCHE",
+                        "start_time": "18:00",
+                        "end_time": "19:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "etta_marcus",
+                        "artist": "ETTA MARCUS",
+                        "start_time": "20:00",
+                        "end_time": "20:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "qendresa",
+                        "artist": "QENDRESA",
+                        "start_time": "21:15",
+                        "end_time": "22:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "ades_the_planet",
+                        "artist": "ADES THE PLANET",
+                        "start_time": "23:00",
+                        "end_time": "00:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "radio_nova_djs",
+                        "artist": "RADIO NOVA DJ'S",
+                        "start_time": "00:15",
+                        "end_time": "01:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "date": "2026-06-07",
+        "label": "Dimanche 7 Juin",
+        "scenes": [
+            {
+                "name": "LA PRAIRIE",
+                "lineup": [
+                    {
+                        "id": "luvcat",
+                        "artist": "LUVCAT",
+                        "start_time": "17:45",
+                        "end_time": "18:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "feu_chatterton",
+                        "artist": "FEU! CHATTERTON",
+                        "start_time": "19:15",
+                        "end_time": "20:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "gorillaz",
+                        "artist": "GORILLAZ",
+                        "start_time": "21:15",
+                        "end_time": "22:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "little_simz",
+                        "artist": "LITTLE SIMZ",
+                        "start_time": "23:45",
+                        "end_time": "00:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LA CLAIRIÈRE",
+                "lineup": [
+                    {
+                        "id": "sudan_archives",
+                        "artist": "SUDAN ARCHIVES",
+                        "start_time": "18:15",
+                        "end_time": "19:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "sebastien_tellier",
+                        "artist": "SÉBASTIEN TELLIER",
+                        "start_time": "20:15",
+                        "end_time": "21:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "dijon",
+                        "artist": "DIJON",
+                        "start_time": "22:45",
+                        "end_time": "23:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LA CANOPÉE",
+                "lineup": [
+                    {
+                        "id": "max_baby",
+                        "artist": "MAX BABY",
+                        "start_time": "18:30",
+                        "end_time": "19:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "jim_legxacy",
+                        "artist": "JIM LEGXACY",
+                        "start_time": "20:15",
+                        "end_time": "21:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "yoa",
+                        "artist": "YOA",
+                        "start_time": "22:45",
+                        "end_time": "23:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "LALALAND",
+                "lineup": [
+                    {
+                        "id": "phelowe",
+                        "artist": "PHELOWE",
+                        "start_time": "17:00",
+                        "end_time": "18:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "laze",
+                        "artist": "LAZE",
+                        "start_time": "18:30",
+                        "end_time": "20:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "tatyana_jane",
+                        "artist": "TATYANA JANE",
+                        "start_time": "20:00",
+                        "end_time": "21:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "dj_gigola",
+                        "artist": "DJ GIGOLA",
+                        "start_time": "21:30",
+                        "end_time": "23:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "yousuke_yukimatsu",
+                        "artist": "¥ØU$UK€ ¥UK1MAT$U",
+                        "start_time": "23:30",
+                        "end_time": "01:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "THINKTANK",
+                "lineup": [
+                    {
+                        "id": "bingauche",
+                        "artist": "BINGAUCHE",
+                        "start_time": "18:00",
+                        "end_time": "19:30",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "etta_marcus",
+                        "artist": "ETTA MARCUS",
+                        "start_time": "20:00",
+                        "end_time": "20:45",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "qendresa",
+                        "artist": "QENDRESA",
+                        "start_time": "21:15",
+                        "end_time": "22:15",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "ades_the_planet",
+                        "artist": "ADES THE PLANET",
+                        "start_time": "23:00",
+                        "end_time": "00:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    },
+                    {
+                        "id": "radio_nova_djs",
+                        "artist": "RADIO NOVA DJ'S",
+                        "start_time": "00:15",
+                        "end_time": "01:00",
+                        "description": "Lipsum",
+                        "links": {
+                            "spotify": "#",
+                            "apple": "#",
+                            "deezer": "#",
+                            "qobuz": "#",
+                            "youtube": "#",
+                            "amazon": "#",
+                            "tidal": "#"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
