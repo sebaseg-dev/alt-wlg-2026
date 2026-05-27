@@ -91,15 +91,14 @@ const scenes = dayData.scenes.map(scene => scene.name);
     .event-name {
         width: 100%;
         overflow: hidden;
-        white-space: nowrap;
         text-overflow: ellipsis;
         text-align: center;
         font-weight: 600;
         flex-shrink: 0;
-    }
-
-    .event-times {
-        
+        line-height: 1.2rem;
+        max-height: round(down, 50%, 1.2rem);  
+        min-height: 1.2rem;
+        overflow: hidden;
     }
 
     .scene-0 {
