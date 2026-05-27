@@ -35,3 +35,13 @@ export interface EnrichedEvent extends TimetableEvent {
     endDecimal: number;
     durationQuarters: number;
 }
+
+export interface EnrichedScene extends Omit<Scene, 'lineup'> {
+    lineup: EnrichedEvent[];
+}
+
+export interface EnrichedDay extends Omit<Day, 'scenes'> {
+    scenes: EnrichedScene[];
+}
+
+export type EnrichedTimetableData = EnrichedDay[];

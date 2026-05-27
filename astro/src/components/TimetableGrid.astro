@@ -1,30 +1,13 @@
 ---
-import type { Day } from '../types/timetable';
-import normaliseTime from '../utilities/normaliseTime';
+import type { EnrichedDay } from '../types/timetable';
 
 interface Props {
-	dayData: Day;
+	dayData: EnrichedDay;
 }
 
 const { dayData } = Astro.props;
 
-const enrichedScenes = dayData.scenes.map(scene => {
-    return {
-        ...scene,
-        lineup: scene.lineup.map(event => {
-            const start = normaliseTime(event.start_time);
-            const end = normaliseTime(event.end_time);
-            return {
-                ...event,
-                startDecimal: start,
-                endDecimal: end,
-                durationQuarters: (end - start) * 4,
-            };
-        })
-    }
-})
-
-const allDecimalTimes = enrichedScenes.flatMap(scene => scene.lineup.flatMap(event => [event.startDecimal, event.endDecimal]));
+const allDecimalTimes = dayData.scenes.flatMap(scene => scene.lineup.flatMap(event => [event.startDecimal, event.endDecimal]));
 const minTime = Math.min(...allDecimalTimes);
 const maxTime = Math.max(...allDecimalTimes);
 const totalQuarters = (maxTime - minTime) * 4;
@@ -38,5 +21,5 @@ const totalQuarters = (maxTime - minTime) * 4;
 </div>
 
 <pre>
-    { JSON.stringify(enrichedScenes) }
+    { JSON.stringify(dayData) }
 </pre>

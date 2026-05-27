@@ -1,4 +1,5 @@
 import type { TimetableData } from '../types/timetable';
+import { enrichTimetableData } from '../utilities/enrichTimetableData';
 
 const CACHE_NAME = 'data-cache';
 const DATA_URL = '/data.json';
@@ -123,13 +124,15 @@ async function getDataFromNetwork(): Promise<TimetableData | null> {
         const response = await fetch(DATA_URL);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-        const data: TimetableData = await response.json();
+        const rawData: TimetableData = await response.json();
         console.log('✅ Données récupérées depuis le réseau');
 
-        await saveToCache(data);
-        saveToLocalStorage(data);
+        const enrichedData = enrichTimetableData(rawData);
+
+        await saveToCache(enrichedData);
+        saveToLocalStorage(enrichedData);
         
-        return data;
+        return enrichedData;
     } catch (error) {
         console.error('❌ Échec critique du réseau au premier démarrage:', error);
         return null; // Retourne null proprement au lieu de faire crasher l'application
