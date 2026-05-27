@@ -1,4 +1,6 @@
 ---
+import { COLORS } from "../constants";
+
 interface Props {
 	title: string;
 }
@@ -15,20 +17,33 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="theme-color" content="#111111" />
-		
-		<!-- On utilise le chemin classique du manifest généré par le plugin -->
 		<link rel="manifest" href="/manifest.webmanifest" />
 	</head>
 	<body>
 		<slot />
 
-		<!-- Le script registerSW.js est généré automatiquement par l'intégration dans le dossier public au build -->
 		<script is:inline src="/registerSW.js"></script>
 	</body>
 </html>
 
-<style is:global>
-	:root { --accent: #4CAF50; }
-	html { font-family: system-ui, sans-serif; background: #111111; color: white; }
-	body { margin: 0; padding: 20px; }
+<style is:global define:vars={{ 
+    textColor: COLORS.DARK_POINT,
+    backgroundColor: COLORS.LIGHT_POINT,
+    accentColor: COLORS.ACCENT,
+    scene0PlainColor: COLORS.SCENE_0_PLAIN,
+    scene1PlainColor: COLORS.SCENE_1_PLAIN,
+    scene2PlainColor: COLORS.SCENE_2_PLAIN,
+    scene3PlainColor: COLORS.SCENE_3_PLAIN,
+    scene4PlainColor: COLORS.SCENE_4_PLAIN,
+}}>
+	html { 
+	    font-family: system-ui, sans-serif; 
+		background: var(--backgroundColor); 
+		color: var(--textColor); 
+	}
+	
+	body { 
+	    margin: 0; 
+		padding: 16px; 
+	}
 </style>
