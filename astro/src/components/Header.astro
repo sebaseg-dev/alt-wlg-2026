@@ -1,0 +1,30 @@
+---
+interface Props {
+    pageTitle: string;
+}
+
+const { pageTitle } = Astro.props;
+---
+<header>
+    <p>alt WeLoveGreen2026</p>
+    <h1>{pageTitle}</h1>
+</header>
+
+<style>
+    header {
+        width: calc(100vw - 16px - 16px);
+        background-color: var(--textColor);
+        color: var(--backgroundColor);
+        padding: 16px;
+    }
+
+    p, h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    h1 {
+        text-align: center;
+    }
+</style>

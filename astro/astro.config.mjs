@@ -7,7 +7,7 @@ export default defineConfig({
     integrations: [
         AstroPWA({
             registerType: 'autoUpdate',
-            includeAssets: ['data.json'],
+            includeAssets: [],
             manifest: {
                 name: 'alt wlg 2026',
                 short_name: 'alt wlg 26',
@@ -30,21 +30,21 @@ export default defineConfig({
                 ]
             },
             workbox: {
-                globPatterns: ['**/*.{js,css,html,svg,png,ico,txt,json}'],
+                globPatterns: ['**/*.{js,css,html,svg,png,ico,txt}'],
                 navigateFallback: '/',
-                runtimeCaching: [
-                    {
-                        urlPattern: /\/data\.json/,
-                        handler: 'NetworkFirst',
-                        options: {
-                            cacheName: 'data-cache',
-                            expiration: {
-                                maxEntries: 1,
-                                maxAgeSeconds: 60 * 60 * 24,
-                            },
-                        },
-                    }
-                ]
+                // runtimeCaching: [
+                //     {
+                //         urlPattern: /\/data\.json/,
+                //         handler: 'NetworkFirst',
+                //         options: {
+                //             cacheName: 'data-cache',
+                //             expiration: {
+                //                 maxEntries: 1,
+                //                 maxAgeSeconds: 60 * 60 * 24,
+                //             },
+                //         },
+                //     }
+                // ]
             }
         }),
     ],

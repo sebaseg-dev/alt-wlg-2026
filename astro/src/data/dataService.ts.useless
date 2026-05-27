@@ -1,3 +1,5 @@
+// USELESS: j'essaie de servir un json pour la mise à jour de pages statiques... je viens de me rendre compte de mon hérésie...
+
 import type { EnrichedTimetableData, TimetableData } from '../types/timetable';
 import { enrichTimetableData } from '../utilities/enrichTimetableData';
 
@@ -37,7 +39,9 @@ export async function getTimetableData(onUpdate?: (data: EnrichedTimetableData) 
  */
 async function fetchSilentUpdate(onUpdate?: (data: EnrichedTimetableData) => void) {
     try {
-        const response = await fetch(DATA_URL);
+        const response = await fetch(`${DATA_URL}?t${Date.now()}`, {
+            cache: 'no-store',
+        });
         if (response.ok) {
             const rawData: TimetableData = await response.json();
             const enrichedData = enrichTimetableData(rawData);
