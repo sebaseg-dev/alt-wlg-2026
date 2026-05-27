@@ -21,18 +21,5 @@ export function getStaticPaths() {
 const { initialData } = Astro.props;
 ---
 <Layout title={`${initialData.label}`}>
-    <main>
-        <TimetableGrid dayData={initialData} />
-    </main>
+    <TimetableGrid dayData={initialData} />
 </Layout>
-
-<style>
-    main {
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        /* device view height (100dvh) - footer (4rem) - header (2*1.5rem*1.5)-(2*16px) - padding main (2*16px)*/
-        height: calc(100dvh - 4rem - calc(2 * 1.5rem * 1.5) - 16px - 16px - 16px - 16px);
-    }
-</style>
