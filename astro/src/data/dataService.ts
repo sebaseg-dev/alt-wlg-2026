@@ -1,15 +1,15 @@
-import type { TimetableData } from '../types/timetable';
+import type { EnrichedTimetableData, TimetableData } from '../types/timetable';
 import { enrichTimetableData } from '../utilities/enrichTimetableData';
 
 const CACHE_NAME = 'data-cache';
 const DATA_URL = '/data.json';
 
 /**
- * Charge les données de la timetable (Stratégie Cache-First avec Revalidation en arrière-plan)
+ * Charge les données de la timetable enrichies (Stratégie Cache-First avec Revalidation en arrière-plan)
  * @param {Function} [onUpdate] - Callback optionnel pour avertir le Front qu'une mise à jour réseau a eu lieu
- * @returns {Promise<TimetableData|null>}
+ * @returns {Promise<EnrichedTimetableData|null>}
  */
-export async function getTimetableData(onUpdate?: (data: TimetableData) => void): Promise<TimetableData | null> {
+export async function getTimetableData(onUpdate?: (data: EnrichedTimetableData) => void): Promise<EnrichedTimetableData | null> {
     // 1. Tente d'abord le Cache Storage (le plus rapide pour la PWA)
     let localData = await fetchFromCache(DATA_URL);
 
@@ -35,24 +35,25 @@ export async function getTimetableData(onUpdate?: (data: TimetableData) => void)
 /**
  * Revalidation en arrière-plan sans bloquer l'affichage de l'utilisateur
  */
-async function fetchSilentUpdate(onUpdate?: (data: TimetableData) => void) {
+async function fetchSilentUpdate(onUpdate?: (data: EnrichedTimetableData) => void) {
     try {
         const response = await fetch(DATA_URL);
         if (response.ok) {
-            const freshData: TimetableData = await response.json();
+            const rawData: TimetableData = await response.json();
+            const enrichedData = enrichTimetableData(rawData);
             
-            // Optionnel mais top : on vérifie si la donnée a vraiment changé avant de tout réécrire
+            // On compare les chaînes JSON pour voir si la donnée a vraiment changé
             const oldDataStr = localStorage.getItem('timetableData');
-            const freshDataStr = JSON.stringify(freshData);
+            const freshDataStr = JSON.stringify(enrichedData);
 
             if (oldDataStr !== freshDataStr) {
                 console.log('🔄 Nouvelle timetable détectée sur le réseau, mise à jour des caches...');
-                await saveToCache(freshData);
-                saveToLocalStorage(freshData);
+                await saveToCache(enrichedData);
+                saveToLocalStorage(enrichedData);
                 
                 // Si le front-end a fourni un callback, on l'exécute pour mettre à jour l'UI à la volée
                 if (typeof onUpdate === 'function') {
-                    onUpdate(freshData);
+                    onUpdate(enrichedData);
                 }
             }
         }
@@ -64,7 +65,7 @@ async function fetchSilentUpdate(onUpdate?: (data: TimetableData) => void) {
 /**
  * Charge les données depuis le Cache Storage
  */
-async function fetchFromCache(url: string): Promise<TimetableData | null> {
+async function fetchFromCache(url: string): Promise<EnrichedTimetableData | null> {
     try {
         if (!('caches' in window)) return null; // Sécurité si vieux navigateur
         const cache = await caches.open(CACHE_NAME);
@@ -79,7 +80,7 @@ async function fetchFromCache(url: string): Promise<TimetableData | null> {
 /**
  * Sauvegarde dans Cache Storage
  */
-async function saveToCache(data: TimetableData) {
+async function saveToCache(data: EnrichedTimetableData) {
     try {
         if (!('caches' in window)) return;
         const cache = await caches.open(CACHE_NAME);
@@ -94,7 +95,7 @@ async function saveToCache(data: TimetableData) {
 /**
  * Sauvegarde dans le Local Storage
  */
-function saveToLocalStorage(data: TimetableData) {
+function saveToLocalStorage(data: EnrichedTimetableData) {
     try {
         localStorage.setItem('timetableData', JSON.stringify(data));
     } catch (error) {
@@ -105,7 +106,7 @@ function saveToLocalStorage(data: TimetableData) {
 /**
  * Récupère les données depuis le Local Storage
  */
-function getDataFromLocalStorage(): TimetableData | null {
+function getDataFromLocalStorage(): EnrichedTimetableData | null {
     try {
         const data = localStorage.getItem('timetableData');
         return data ? JSON.parse(data) : null;
@@ -118,7 +119,7 @@ function getDataFromLocalStorage(): TimetableData | null {
 /**
  * Récupère les données depuis le réseau (uniquement si aucun cache au démarrage)
  */
-async function getDataFromNetwork(): Promise<TimetableData | null> {
+async function getDataFromNetwork(): Promise<EnrichedTimetableData | null> {
     try {
         console.log('🔍 Premier démarrage : Chargement obligatoire depuis le réseau...');
         const response = await fetch(DATA_URL);
