@@ -11,6 +11,7 @@ const allDecimalTimes = dayData.scenes.flatMap(scene => scene.lineup.flatMap(eve
 const minTime = Math.min(...allDecimalTimes);
 const maxTime = Math.max(...allDecimalTimes);
 const totalQuarters = (maxTime - minTime) * 4;
+const scenes = dayData.scenes.map(scene => scene.name);
 
 ---
 
@@ -20,6 +21,58 @@ const totalQuarters = (maxTime - minTime) * 4;
     <p>La journée dure (en quarts d'heures) : {totalQuarters}</p>
 </div>
 
-<pre>
+<div>
+    <p>Calculons ma grille :</p>
+    <p>Nombre de colonnes : {scenes.length}</p>
+    <p>Nombre de lignes : {totalQuarters + 1}</p>
+</div>
+
+<!-- <pre>
     { JSON.stringify(dayData) }
-</pre>
+</pre> -->
+
+<div class="timetable-wrapper">
+    <div class="timetable-grid"style=`
+            grid-template-columns: repeat(${scenes.length}, 140px); 
+            grid-template-rows: repeat(${totalQuarters + 1}, 1fr);
+    `>
+        {dayData.scenes.map((scene, index) => (
+            <div class={`scene-header scene-${index}`} style=`grid-column: ${index + 1}`>
+                {scene.name}
+            </div>
+        ))}
+    </div>
+</div>
+
+<style>
+    .timetable-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .timetable-grid {
+        display: grid;
+    }
+
+    .scene-header {
+        text-wrap: nowrap;
+        background-color: var(--scene-color);
+    }
+
+    .scene-0 {
+        --scene-color: darkkhaki;
+    }
+    .scene-1 {
+        --scene-color: darkgreen;
+    }
+    .scene-2 {
+        --scene-color: blue;
+    }
+    .scene-3 {
+        --scene-color: darkviolet;
+    }
+    .scene-4 {
+        --scene-color: orangered;
+    }
+</style>
