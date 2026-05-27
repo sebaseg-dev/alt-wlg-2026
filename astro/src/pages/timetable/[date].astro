@@ -21,10 +21,16 @@ export function getStaticPaths() {
 const { initialData } = Astro.props;
 ---
 <Layout title={`Timetable – ${initialData.label}`}>
-    <div id="timetable-root">
-        This is the timetable root<br/>
-        Nous sommes le {initialData.label}<br/>
-        Here is my grid:<br/>
+    <main class="content-area">
         <TimetableGrid dayData={initialData} />
-    </div>
+    </main>
 </Layout>
+
+<style>
+    .content-area {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: 100dvh;
+    }
+</style>
