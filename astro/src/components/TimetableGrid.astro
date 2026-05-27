@@ -1,0 +1,119 @@
+---
+import type { EnrichedDay } from '../types/timetable';
+import decimalTimeToDisplayTime from '../utilities/decimalTimeToDisplayTime';
+import { COLORS } from '../constants';
+
+interface Props {
+	dayData: EnrichedDay;
+}
+
+const { dayData } = Astro.props;
+
+const allDecimalTimes = dayData.scenes.flatMap(scene => scene.lineup.flatMap(event => [event.startDecimal, event.endDecimal]));
+const minTime = Math.min(...allDecimalTimes);
+const openingTime = decimalTimeToDisplayTime(minTime);
+const maxTime = Math.max(...allDecimalTimes);
+const closingTime = decimalTimeToDisplayTime(maxTime);
+const totalQuarters = (maxTime - minTime) * 4;
+const scenes = dayData.scenes.map(scene => scene.name);
+
+---
+
+<div>
+    <p>Ouverture des portes : {openingTime} </p>
+    <p>Fin du dernier concert : {closingTime}</p>
+    <p>Dernier métro : {dayData.last_metro}</p>
+</div>
+
+<div class="timetable-wrapper">
+    <div class="timetable-grid"style=`
+            grid-template-columns: repeat(${scenes.length}, 140px); 
+            grid-template-rows: repeat(${totalQuarters + 1}, 24px);
+    `>
+        {dayData.scenes.map((scene, sceneIndex) => (
+            <>
+                <div class={`scene-header scene-${sceneIndex}`} style={`grid-column: ${sceneIndex + 1}`}>
+                    {scene.name}
+                </div>
+            
+                {scene.lineup.map((event, eventIndex) => (
+                    <div class={`lineup-item scene-${sceneIndex}`} style={`
+                        grid-column: ${sceneIndex + 1};
+                        grid-row: ${Math.round((event.startDecimal - minTime) * 4) + 2} / span ${Math.floor(event.durationQuarters)};
+                    `}>
+                        <span class="event-name">{event.artist}</span>
+                        <span class="event-times">{event.start_time} - {event.end_time}</span>
+                    </div>
+                ))}
+            </>
+        ))}
+    </div>
+</div>
+
+<style>
+    .timetable-wrapper {
+        flex: 1;
+        position: relative;
+        width: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .timetable-grid {
+        display: grid;
+        width: max-content;
+    }
+
+    .scene-header {
+        text-wrap: nowrap;
+        background-color: var(--textColor);
+        color: var(--scene-color);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    .lineup-item {
+        background-color: var(--scene-color);
+        border-radius: 8px;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05); 
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .event-name {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        font-weight: 600;
+        flex-shrink: 0;
+        line-height: 1.2rem;
+        max-height: round(down, 50%, 1.2rem);  
+        min-height: 1.2rem;
+        overflow: hidden;
+    }
+
+    .scene-0 {
+        --scene-color: var(--scene0PlainColor);
+    }
+    .scene-1 {
+        --scene-color: var(--scene1PlainColor);
+    }
+    .scene-2 {
+        --scene-color: var(--scene2PlainColor);
+    }
+    .scene-3 {
+        --scene-color: var(--scene3PlainColor);
+    }
+    .scene-4 {
+        --scene-color: var(--scene4PlainColor);
+    }
+</style>

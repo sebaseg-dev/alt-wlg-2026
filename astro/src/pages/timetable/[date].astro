@@ -1,0 +1,36 @@
+---
+import type { Day, TimetableData, EnrichedDay } from '../../types/timetable';
+import Layout from '../../layouts/Layout.astro';
+import rawData from '../../data/data.json';
+import { enrichTimetableData } from '../../utilities/enrichTimetableData';
+import TimetableGrid from '../../components/TimetableGrid.astro';
+
+interface Props {
+    initialData: EnrichedDay;
+}
+
+export function getStaticPaths() {
+    const data = enrichTimetableData(rawData as TimetableData);
+    
+    return data.map(day => ({
+        params: { date: day.date },
+        props: { initialData: day }
+    }))
+}
+
+const { initialData } = Astro.props;
+---
+<Layout title={`Timetable – ${initialData.label}`}>
+    <main class="content-area">
+        <TimetableGrid dayData={initialData} />
+    </main>
+</Layout>
+
+<style>
+    .content-area {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: calc(100dvh - 16px - 16px);
+    }
+</style>
