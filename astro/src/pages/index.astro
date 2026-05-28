@@ -5,21 +5,48 @@ import rawData from '../data/data.json';
 import { enrichTimetableData } from '../utils/enrichTimetableData';
 
 const data: EnrichedTimetableData = enrichTimetableData(rawData as TimetableData);
+
+const allArtists = data.flatMap(day => 
+    day.scenes.flatMap((scene, sceneIndex) => 
+        scene.lineup.map(event => ({
+            ...event,
+            sceneName: scene.name,
+            sceneIndex: sceneIndex,
+            date: day.date,
+            dateLabel: day.label,
+        }))
+    )
+);
+
+allArtists.sort((a, b) => {
+    if (a.date !== b.date){
+        return a.date.localeCompare(b.date);
+    }
+
+    if (a.startDecimal !== b.startDecimal){
+        return a.startDecimal - b.startDecimal;
+    }
+
+    return a.sceneIndex - b.sceneIndex;
+})
+
+let lastRenderedDate = "";
 ---
 
 <Layout title="lineup">
-    <h1>We Love Green 2026 - Accueil</h1>
-    <ul>
-        <li>
-            <a href="/timetable/2026-06-05" style="color: var(--accentColor);">Aller au vendredi 5 juin (test)</a>
-        </li>
-        <li>
-            <a href="/timetable/2026-06-06" style="color: var(--accentColor);">Aller au samedi 6 juin (test)</a>
-        </li>
-        <li>
-            <a href="/timetable/2026-06-07" style="color: var(--accentColor);">Aller au dimanche 7 juin (test)</a>
-        </li>
-    </ul>
+
+    <div class="scrollable-content">
+        {allArtists.map((artist) => {
+            const newDay = artist.date !== lastRenderedDate;
+            lastRenderedDate = artist.date;
+            
+            return <>
+                {newDay && <h2>{artist.dateLabel}</h2>}
+                <div class="test">{artist.date} {artist.startDecimal} {artist.sceneIndex}</div>
+            </>
+        })}
+    </div>
+    
 
     <script is:inline>
         // Écoute l'événement beforeinstallprompt (nécessaire pour l'installation)
@@ -58,3 +85,9 @@ const data: EnrichedTimetableData = enrichTimetableData(rawData as TimetableData
         });
     </script>
 </Layout>
+
+<style>
+    .scrollable-content {
+        overflow-y: auto;
+    }
+</style>
