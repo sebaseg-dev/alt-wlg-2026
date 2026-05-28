@@ -3,10 +3,11 @@ import type { EnrichedTimetableData, TimetableData } from '../types/timetable';
 import Layout from '../layouts/Layout.astro';
 import rawData from '../data/data.json';
 import { enrichTimetableData } from '../utils/enrichTimetableData';
+import EventCard from '../components/EventCard.astro';
 
 const data: EnrichedTimetableData = enrichTimetableData(rawData as TimetableData);
 
-const allArtists = data.flatMap(day => 
+const allEvents = data.flatMap(day => 
     day.scenes.flatMap((scene, sceneIndex) => 
         scene.lineup.map(event => ({
             ...event,
@@ -18,7 +19,7 @@ const allArtists = data.flatMap(day =>
     )
 );
 
-allArtists.sort((a, b) => {
+allEvents.sort((a, b) => {
     if (a.date !== b.date){
         return a.date.localeCompare(b.date);
     }
@@ -36,13 +37,13 @@ let lastRenderedDate = "";
 <Layout title="lineup">
 
     <div class="scrollable-content">
-        {allArtists.map((artist) => {
-            const newDay = artist.date !== lastRenderedDate;
-            lastRenderedDate = artist.date;
+        {allEvents.map((event) => {
+            const newDay = event.date !== lastRenderedDate;
+            lastRenderedDate = event.date;
             
             return <>
-                {newDay && <h2>{artist.dateLabel}</h2>}
-                <div class="test">{artist.date} {artist.startDecimal} {artist.sceneIndex}</div>
+                {newDay && <h2>{event.dateLabel}</h2>}
+                <EventCard event={event} />
             </>
         })}
     </div>
@@ -89,5 +90,9 @@ let lastRenderedDate = "";
 <style>
     .scrollable-content {
         overflow-y: auto;
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 </style>
