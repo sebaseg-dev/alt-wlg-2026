@@ -5,6 +5,7 @@ export interface TimetableEvent {
     end_time: string;
     description: string;
     type: 'music' | 'talk';
+    image?: string;
     links: {
         spotify?: string;
         apple?: string;
