@@ -1,0 +1,84 @@
+---
+import type { EnrichedDay, EnrichedEvent } from '../../types/timetable';
+import Layout from '../../layouts/Layout.astro';
+import { flattenEventsData } from '../../utils/flattenEventsData';
+
+export function getStaticPaths() {
+    const data = flattenEventsData();
+    
+    return data.map(event => ({
+        params: { id: event.id },
+        props: { event: event }
+    }))
+}
+
+interface Props {
+    event: EnrichedEvent;
+}
+
+const { event } = Astro.props;
+---
+<Layout title={`${event.artist}`}>
+    <div class={`scrollable-content scene-${event.sceneIndex}`}>
+        <div class="event-name">
+            {event.artist}
+        </div>
+        <div class="event-location">
+            <p>le <strong>{event.dateLabel}</strong> de <strong>{event.start_time}</strong> à <strong>{event.end_time}</strong></p>
+            <p><span class="scene">{event.sceneName}</span></p>
+        </div>
+        <div class="event-description">
+            {event.description}
+        </div>
+        <ul>
+            <li>artist : {event.artist}</li>
+            <li>start_time : {event.start_time}</li>
+            <li>end_time : {event.end_time}</li>
+            <li>description : {event.description}</li>
+            <li>type : {event.type}</li>
+            <li>sceneName : {event.sceneName}</li>
+            <li>dateLabel : {event.dateLabel}</li>
+        </ul>
+    </div>
+</Layout>
+
+<style>
+    .scrollable-content {
+        overflow-y: auto;
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .event-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .event-location {
+        padding: 4px;
+        background-color: color-mix(in srgb, var(--scene-color), transparent 80%);
+        border-radius: 8px;
+        border: solid 1px var(--scene-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        & > p {
+            margin: 8px;
+        }
+    }
+
+    .event-description {
+
+    }
+
+    .scene {
+        background-color: color-mix(in srgb, var(--scene-color), transparent 20%);
+        padding: 0 4px;
+        border-radius: 4px;
+        border: solid 1px var(--scene-color);
+    }
+</style>
