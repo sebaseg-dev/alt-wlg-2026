@@ -1,5 +1,10 @@
 ---
+import type { EnrichedTimetableData, TimetableData } from '../types/timetable';
 import Layout from '../layouts/Layout.astro';
+import rawData from '../data/data.json';
+import { enrichTimetableData } from '../utils/enrichTimetableData';
+
+const data: EnrichedTimetableData = enrichTimetableData(rawData as TimetableData);
 ---
 
 <Layout title="lineup">
