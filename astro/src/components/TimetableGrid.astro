@@ -39,14 +39,12 @@ const scenes = dayData.scenes.map(scene => scene.name);
                 </div>
             
                 {scene.lineup.map((event, eventIndex) => (
-                    <a href={`/event/${event.id}`} style={`
+                    <a href={`/event/${event.id}`} class={`lineup-item scene-${sceneIndex}`} style={`
                         grid-column: ${sceneIndex + 1};
                         grid-row: ${Math.round((event.startDecimal - minTime) * 4) + 2} / span ${Math.floor(event.durationQuarters)};
                     `}>
-                        <div class={`lineup-item scene-${sceneIndex}`}>
                             <span class="event-name">{event.artist}</span>
                             <span class="event-times">{event.start_time} - {event.end_time}</span>
-                        </div>
                     </a>
                 ))}
             </>
@@ -55,6 +53,10 @@ const scenes = dayData.scenes.map(scene => scene.name);
 </div>
 
 <style>
+    a {
+        display: block;
+    }
+    
     .timetable-wrapper {
         flex: 1;
         position: relative;
@@ -71,7 +73,7 @@ const scenes = dayData.scenes.map(scene => scene.name);
     .scene-header {
         text-wrap: nowrap;
         background-color: var(--textColor);
-        color: var(--scene-color);
+        color: color-mix(in srgb, var(--scene-color), white 40%);
         position: sticky;
         top: 0;
         z-index: 100;
@@ -81,7 +83,7 @@ const scenes = dayData.scenes.map(scene => scene.name);
     }
 
     .lineup-item {
-        background-color: var(--scene-color);
+        background-color: color-mix(in srgb, var(--scene-color), transparent 80%);
         border-radius: 8px;
         box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05); 
         padding: 8px;
