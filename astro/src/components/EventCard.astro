@@ -1,5 +1,11 @@
 ---
+import type { EnrichedEvent } from '../types/timetable';
+
 const { event } = Astro.props;
+
+interface Props {
+	event: EnrichedEvent;
+}
 ---
 <div class={`event-card scene-${event.sceneIndex}`}>
     <div class="event-title">{event.artist}</div>

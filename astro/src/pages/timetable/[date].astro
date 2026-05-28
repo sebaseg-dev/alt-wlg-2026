@@ -10,7 +10,7 @@ interface Props {
 }
 
 export function getStaticPaths() {
-    const data = enrichTimetableData(rawData as TimetableData);
+    const data = enrichTimetableData();
     
     return data.map(day => ({
         params: { date: day.date },

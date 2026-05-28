@@ -16,9 +16,24 @@ export interface TimetableEvent {
     };
 }
 
+export interface EnrichedEvent extends TimetableEvent {
+    startDecimal: number;
+    endDecimal: number;
+    durationQuarters: number;
+    sceneName: string;
+    sceneIndex: number;
+    date: string;
+    dateLabel: string;
+}
+
 export interface Scene {
     name: string;
     lineup: TimetableEvent[];
+}
+
+export interface EnrichedScene {
+    name: string;
+    lineup: EnrichedEvent[];
 }
 
 export interface Day {
@@ -28,20 +43,13 @@ export interface Day {
     scenes: Scene[];
 }
 
-export type TimetableData = Day[];
-
-export interface EnrichedEvent extends TimetableEvent {
-    startDecimal: number;
-    endDecimal: number;
-    durationQuarters: number;
-}
-
-export interface EnrichedScene extends Omit<Scene, 'lineup'> {
-    lineup: EnrichedEvent[];
-}
-
-export interface EnrichedDay extends Omit<Day, 'scenes'> {
+export interface EnrichedDay {
+    date: string;
+    label: string;
+    last_metro: string;
     scenes: EnrichedScene[];
 }
+
+export type TimetableData = Day[];
 
 export type EnrichedTimetableData = EnrichedDay[];
