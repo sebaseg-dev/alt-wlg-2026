@@ -39,13 +39,15 @@ const scenes = dayData.scenes.map(scene => scene.name);
                 </div>
             
                 {scene.lineup.map((event, eventIndex) => (
-                    <div class={`lineup-item scene-${sceneIndex}`} style={`
+                    <a href={`/event/${event.id}`} style={`
                         grid-column: ${sceneIndex + 1};
                         grid-row: ${Math.round((event.startDecimal - minTime) * 4) + 2} / span ${Math.floor(event.durationQuarters)};
                     `}>
-                        <span class="event-name">{event.artist}</span>
-                        <span class="event-times">{event.start_time} - {event.end_time}</span>
-                    </div>
+                        <div class={`lineup-item scene-${sceneIndex}`}>
+                            <span class="event-name">{event.artist}</span>
+                            <span class="event-times">{event.start_time} - {event.end_time}</span>
+                        </div>
+                    </a>
                 ))}
             </>
         ))}
