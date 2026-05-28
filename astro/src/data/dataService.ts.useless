@@ -1,7 +1,7 @@
 // USELESS: j'essaie de servir un json pour la mise à jour de pages statiques... je viens de me rendre compte de mon hérésie...
 
 import type { EnrichedTimetableData, TimetableData } from '../types/timetable';
-import { enrichTimetableData } from '../utilities/enrichTimetableData';
+import { enrichTimetableData } from '../utils/enrichTimetableData';
 
 const CACHE_NAME = 'data-cache';
 const DATA_URL = '/data.json';

@@ -1,6 +1,6 @@
 ---
 import type { EnrichedDay } from '../types/timetable';
-import decimalTimeToDisplayTime from '../utilities/decimalTimeToDisplayTime';
+import decimalTimeToDisplayTime from '../utils/decimalTimeToDisplayTime';
 import { COLORS } from '../constants';
 
 interface Props {
@@ -99,21 +99,5 @@ const scenes = dayData.scenes.map(scene => scene.name);
         max-height: round(down, 50%, 1.2rem);  
         min-height: 1.2rem;
         overflow: hidden;
-    }
-
-    .scene-0 {
-        --scene-color: var(--scene0PlainColor);
-    }
-    .scene-1 {
-        --scene-color: var(--scene1PlainColor);
-    }
-    .scene-2 {
-        --scene-color: var(--scene2PlainColor);
-    }
-    .scene-3 {
-        --scene-color: var(--scene3PlainColor);
-    }
-    .scene-4 {
-        --scene-color: var(--scene4PlainColor);
     }
 </style>
