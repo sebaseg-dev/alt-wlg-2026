@@ -20,8 +20,11 @@ const { event } = Astro.props;
 ---
 <Layout title={`${event.artist}`}>
     <div class={`scrollable-content scene-${event.sceneIndex}`}>
+        {event.image && <div class="image-container">
+            <img src={event.image}/>
+        </div>}
         <div class="event-name">
-            {event.artist}
+            <span>{event.artist}</span>
         </div>
         <div class="event-location">
             <p>le <strong>{event.dateLabel}</strong> de <strong>{event.start_time}</strong> à <strong>{event.end_time}</strong></p>
@@ -42,9 +45,30 @@ const { event } = Astro.props;
         gap: 16px;
     }
 
+    .image-container {
+        overflow: hidden;
+        min-height: 200px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+
+        & > img {
+            height: auto;
+            max-height: 250px;
+            min-width: 0;
+            object-fit: contain;
+            
+        }
+    }
+
     .event-name {
         font-size: 1.5rem;
         font-weight: 700;
+        margin-top: -40px;
+
+        & > span {
+            background-color: var(--backgroundColor);
+        }
     }
 
     .event-location {
