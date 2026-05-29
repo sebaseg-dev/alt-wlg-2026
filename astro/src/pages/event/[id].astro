@@ -21,7 +21,7 @@ const { event } = Astro.props;
 <Layout title={`${event.artist}`}>
     <div class={`scrollable-content scene-${event.sceneIndex}`}>
         {event.image && <div class="image-container">
-            <img src={event.image}/>
+            <img src={event.image} onerror="this.closest('.image-container').style.display='none'"/>
         </div>}
         <div class="event-name">
             <span>{event.artist}</span>
@@ -52,11 +52,8 @@ const { event } = Astro.props;
         display: flex;
         justify-content: center;
 
-        background-image: url("/event-placeholder.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
+        margin-bottom: -40px;
+        
         & > img {
             height: auto;
             max-height: 250px;
@@ -69,7 +66,6 @@ const { event } = Astro.props;
     .event-name {
         font-size: 1.5rem;
         font-weight: 700;
-        margin-top: -40px;
 
         & > span {
             background-color: var(--backgroundColor);
