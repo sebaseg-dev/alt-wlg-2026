@@ -52,12 +52,17 @@ const { event } = Astro.props;
         display: flex;
         justify-content: center;
 
+        background-image: url("/event-placeholder.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
         & > img {
             height: auto;
             max-height: 250px;
             min-width: 0;
             object-fit: contain;
-            
+            content-visibility: auto;
         }
     }
 
