@@ -1,10 +1,13 @@
 import type { TimetableData, EnrichedTimetableData } from "../types/timetable";
 import normaliseTime from "./normaliseTime";
+import rawData from "../data/data.json";
 
-export function enrichTimetableData(data: TimetableData): EnrichedTimetableData {
+export function enrichTimetableData(): EnrichedTimetableData {
+    const data = rawData as TimetableData;
+    
     return data.map(day => ({
         ...day,
-        scenes: day.scenes.map(scene => ({
+        scenes: day.scenes.map((scene, sceneIndex) => ({
             ...scene,
             lineup: scene.lineup.map(event => {
                 const start = normaliseTime(event.start_time);
@@ -13,7 +16,11 @@ export function enrichTimetableData(data: TimetableData): EnrichedTimetableData 
                     ...event,
                     startDecimal: start,
                     endDecimal: end,
-                    durationQuarters: (end - start) * 4
+                    durationQuarters: (end - start) * 4,
+                    sceneName: scene.name,
+                    sceneIndex: sceneIndex,
+                    date: day.date,
+                    dateLabel: day.label,
                 };
             }),
         })),

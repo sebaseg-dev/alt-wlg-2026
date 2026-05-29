@@ -1,11 +1,19 @@
 ---
+import type { EnrichedEvent } from '../types/timetable';
+
 const { event } = Astro.props;
+
+interface Props {
+	event: EnrichedEvent;
+}
 ---
-<div class={`event-card scene-${event.sceneIndex}`}>
-    <div class="event-title">{event.artist}</div>
-    <div>{event.dateLabel} de {event.start_time} à {event.end_time}</div>
-    <div>Scène <span class="scene">{event.sceneName}</span></div>
-</div>
+<a href={`/event/${event.id}`}>
+    <div class={`event-card scene-${event.sceneIndex}`}>
+        <div class="event-title">{event.artist}</div>
+        <div>{event.dateLabel} de {event.start_time} à {event.end_time}</div>
+        <div>Scène <span class="scene"><strong>{event.sceneName}</strong></span></div>
+    </div>
+</a>
 
 <style>
     .event-card {
@@ -20,7 +28,7 @@ const { event } = Astro.props;
     }
 
     .scene {
-        background-color: var(--scene-color);
+        background-color: color-mix(in srgb, var(--scene-color), transparent 20%);
         padding: 0 4px;
         border-radius: 4px;
     }
