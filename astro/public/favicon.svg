@@ -1,9 +1,183 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="135.46666mm"
+   height="135.46669mm"
+   viewBox="0 0 135.46666 135.46669"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-660.51098,-91.231431)">
+    <g
+       id="g6">
+      <rect
+         style="display:inline;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         id="rect1"
+         width="135.46666"
+         height="135.46667"
+         x="247.65656"
+         y="0"
+         ry="0"
+         rx="0" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:105.833px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';text-align:start;letter-spacing:-0.320146px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         x="261.57947"
+         y="48.713081"
+         id="text2"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.05px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.320146px;fill:#424242;fill-opacity:1;stroke-width:0.999999"
+           x="261.57947"
+           y="48.713081"
+           id="tspan3">WE LOVE</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:105.833px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         x="259.61966"
+         y="110.2015"
+         id="text5"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;fill:#424242;fill-opacity:1;stroke-width:0.999999"
+           x="259.61966"
+           y="110.2015"
+           id="tspan5">ALT TIMETABLE</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:19.05px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         x="260.91595"
+         y="76.954483"
+         id="text6"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.4px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;fill:#424242;fill-opacity:1;stroke-width:0.999999"
+           x="260.91595"
+           y="76.954483"
+           id="tspan6">GREEN</tspan></text>
+      <g
+         id="g19">
+        <rect
+           style="display:inline;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect3"
+           width="135.46666"
+           height="135.46667"
+           x="260.08392"
+           y="198.84619"
+           ry="0"
+           rx="0" />
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect4"
+           width="108.12647"
+           height="104.39828"
+           x="273.75403"
+           y="214.38039"
+           ry="0"
+           rx="0" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';text-align:start;letter-spacing:-5.29167px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           x="273.47537"
+           y="255.93134"
+           id="text6-0"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:57.15px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-5.29167px;direction:ltr;fill:#424242;fill-opacity:1;stroke-width:0.999999"
+             x="273.47537"
+             y="255.93134"
+             id="tspan6-2">ALT</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#424242;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           x="271.96338"
+           y="318.47388"
+           id="text4"><tspan
+             id="tspan18"
+             x="271.96338"
+             y="318.47388">Green</tspan></text>
+        <g
+           id="g18"
+           transform="translate(-3.7713526,-0.05415324)">
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#424242;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+             x="289.90845"
+             y="291.19437"
+             id="text13"><tspan
+               id="tspan17"
+               x="289.90845"
+               y="291.19437">Love</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.05px;line-height:0px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:-2.02935px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#424242;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+             x="-292.099"
+             y="289.83676"
+             id="text16"
+             transform="rotate(-90)"><tspan
+               id="tspan16"
+               x="-292.099"
+               y="289.83676"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-2.02935px;writing-mode:lr-tb;direction:ltr;fill:#424242;fill-opacity:1">We</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g24"
+         transform="translate(221.48621,-108.8661)">
+        <rect
+           style="display:inline;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect19"
+           width="135.46666"
+           height="135.46667"
+           x="260.08392"
+           y="198.84619"
+           ry="0"
+           rx="0" />
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect20"
+           width="108.12647"
+           height="104.39828"
+           x="273.75403"
+           y="214.38039"
+           ry="0"
+           rx="0" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';text-align:start;letter-spacing:-5.29167px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           x="273.47534"
+           y="287.35501"
+           id="text20"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:57.15px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-5.29167px;direction:ltr;fill:#424242;fill-opacity:1;stroke-width:0.999999"
+             x="273.47534"
+             y="287.35501"
+             id="tspan20">ALT</tspan></text>
+      </g>
+      <g
+         id="g25"
+         transform="translate(400.42705,-107.61477)">
+        <rect
+           style="display:inline;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect24"
+           width="135.46666"
+           height="135.46667"
+           x="260.08392"
+           y="198.84619"
+           ry="0"
+           rx="0" />
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect25"
+           width="108.12647"
+           height="104.39828"
+           x="273.75403"
+           y="214.38039"
+           ry="0"
+           rx="0" />
+        <path
+           style="font-weight:bold;font-size:57.15px;line-height:0px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';letter-spacing:-5.29167px;fill:#424242;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           d="m 317.175,287.35501 h -11.07839 l -2.87425,-8.39949 h -15.40371 l -2.87424,8.39949 h -10.79934 l 15.3479,-41.55095 h 12.33413 z m -16.54783,-16.01763 -5.10666,-14.90141 -5.10667,14.90141 z m 47.19815,16.01763 h -29.97026 v -41.55095 h 10.71562 v 33.51423 h 19.25464 z m 33.66409,-33.51423 h -12.97595 v 33.51423 h -10.71563 v -33.51423 h -12.97595 v -8.03672 h 36.66753 z"
+           id="text25"
+           aria-label="ALT" />
+      </g>
+    </g>
+  </g>
 </svg>
