@@ -1,36 +1,9 @@
 ---
-import type { EnrichedTimetableData, TimetableData } from '../types/timetable';
 import Layout from '../layouts/Layout.astro';
-import rawData from '../data/data.json';
-import { enrichTimetableData } from '../utils/enrichTimetableData';
 import EventCard from '../components/EventCard.astro';
+import { flattenEventsData } from '../utils/flattenEventsData';
 
-const data: EnrichedTimetableData = enrichTimetableData(rawData as TimetableData);
-
-const allEvents = data.flatMap(day => 
-    day.scenes.flatMap((scene, sceneIndex) => 
-        scene.lineup.map(event => ({
-            ...event,
-            sceneName: scene.name,
-            sceneIndex: sceneIndex,
-            date: day.date,
-            dateLabel: day.label,
-        }))
-    )
-);
-
-allEvents.sort((a, b) => {
-    if (a.date !== b.date){
-        return a.date.localeCompare(b.date);
-    }
-
-    if (a.startDecimal !== b.startDecimal){
-        return a.startDecimal - b.startDecimal;
-    }
-
-    return a.sceneIndex - b.sceneIndex;
-})
-
+const allEvents = flattenEventsData();
 let lastRenderedDate = "";
 ---
 

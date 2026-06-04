@@ -1,21 +1,21 @@
 ---
-import type { TimetableData, EnrichedDay } from '../../types/timetable';
+import type { EnrichedDay } from '../../types/timetable';
 import Layout from '../../layouts/Layout.astro';
-import rawData from '../../data/data.json';
 import { enrichTimetableData } from '../../utils/enrichTimetableData';
 import TimetableGrid from '../../components/TimetableGrid.astro';
 
-interface Props {
-    initialData: EnrichedDay;
-}
 
 export function getStaticPaths() {
-    const data = enrichTimetableData(rawData as TimetableData);
+    const data = enrichTimetableData();
     
     return data.map(day => ({
         params: { date: day.date },
         props: { initialData: day }
     }))
+}
+
+interface Props {
+    initialData: EnrichedDay;
 }
 
 const { initialData } = Astro.props;
