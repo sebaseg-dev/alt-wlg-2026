@@ -61,6 +61,14 @@ const { title } = Astro.props;
         height: calc(100dvh - 4rem - calc(2 * 1.5rem * 1.5) - 16px - 16px - 16px - 16px);
     }
 
+    .scrollable-content {
+        overflow-y: auto;
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .scene-0 {
         --scene-color: var(--scene0PlainColor);
     }
