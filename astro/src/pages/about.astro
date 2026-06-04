@@ -3,7 +3,80 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="à propos">
-    <p>
-        Lipsum
-    </p>
+    <div class="scrollable-content">
+        <h2>Pourquoi cette app?</h2>
+        <p>
+            Cette année, je vais à We Love Green. Les sites officiels (<a href="https://www.welovegreen.fr/" target="_blank" rel="noopener noreferrer">le site welovegreen.fr</a>, <a href="https://app.fragolabs.com/46ccef91-a493-4fa5-9762-269b2ca80400" target="_blank" rel="noopener noreferrer">l'application</a>, <a href="https://www.instagram.com/welovegreen/" target="_blank" rel="noopener noreferrer">la page Instagram</a>) ne proposent pas de timetable satisfaisante: juste une image à screener pour se repérer pendant le festival.
+        </p>
+        <p>
+            D'accord, le lineup n'est pas immense, le nombre de scènes non plus, on peut s'y repérer ou l'avoir en tête. Mais je sais ce que c'est que de consulter son téléphone, sans réseau fiable, au milieu de 2 concerts, de ne plus savoir ce que l'on avait prévu, de scroller dans ses propres photos du festival jusqu'à retrouver la prog'... jusqu'à se rendre compte qu'on n'a pas regardé le bon jour.
+        </p>
+        <p>
+            Moi c'est Seb, développeur indépendant (<a href="https://sebaseg.fr?utm_source=alt-wlg-2026&utm_medium=application" target="_blank" rel="noopener noreferrer">sebaseg.fr</a>). J'ai pris quelques jours pour me créer cette app et je voulais la partager avec le public.
+        </p>
+        <h2>Quelles sont les fonctionnalités de cette app?</h2>
+        <p>
+            D'abord, cette app ne remplace pas l'<a href="https://app.fragolabs.com/46ccef91-a493-4fa5-9762-269b2ca80400" target="_blank" rel="noopener noreferrer">app officielle</a>. Elle reste la meilleure source d'information: si un changement de dernière minute devait intervenir sur le planning, elle devrait vous prévenir avec des notifications et se mettre à jour plus fréquemment. Elle permet de gérer d'autres choses, notamment son compte cashless. Mais elle pèse 70Mo, nécessite du réseau – ce qui peut être lourd à gérer sur un téléphone bouillant en festival – et surtout... elle ne propose rien d'autre qu'une image non zoomable en guise de timetables.
+        </p>
+        <p>
+            alt-WeLoveGreen, c'est une mini-app installable sur tous les appareils, qui stocke toutes les infos utiles hors ligne, pèse en tout &lt;0.2Mo, et essaie de présenter l'info d'une manière accessible. Elle est moche, ok, mais j'espère qu'elle peut s'avérer utile.
+        </p>
+        <p>
+            alt-WeLoveGreen contient, à date:
+            <ul>
+                <li>▶️ le lineup des événements au programme par ordre chronologique</li>
+                <li>5️⃣/6️⃣/7️⃣ une timetable par scène et par jour</li>
+                <li>chaque événement est cliquable et sonne accès à une partie des infos officielles</li>
+            </ul>
+        </p>
+        <h2>Autres fonctionnalités: puis-je contribuer?</h2>
+        <p>
+            J'adorerais rendre cette app plus fonctionnelle, plus jolie... mais le développement, ça prend du temps.
+        </p>
+        <p>
+            J'ai quelques idées pour ça:
+            <ul>
+                <li>Mettre des artistes en favoris pour qu'ils <em>shine on the timeline</em></li>
+                <li>Ajouter les liens des pages artistes sur les réseaux et plateformes (de préférence, les plus respectueuses au-moins) pour mieux les découvrir avant le jour J</li>
+                <li>Chopper et rendre disponible l'info des autres stands (food and drinks – ça fait partie du festival ça aussi) pour savoir avant de faire la queue ce qu'on peut se mettre dans le gosier (et à quel prix 🙃)</li>
+                <li>...</li>
+                <li>Et réutiliser tout ça pour un autre festival, pourquoi pas?</li>
+            </ul>
+        </p>
+        <p>
+            Envoyer des suggestions, des bugs, des idées, un prochain festival à couvrir ou juste des commentaires ? Écrivez-moi sur <a href="mailto:alt-wlg-2026@sebaseg.fr">alt-wlg-2026@sebaseg.fr</a> 💚
+        </p>
+        <p>
+            Et si jamais vous voudriez m'offrir un verre, <a href="https://ko-fi.com/sebaseg04" target="_blank" rel="noopener noreferrer">j'ai un Kofi pour ça</a>. Merci beaucoup ☺️
+        </p>
+        <h2>Sources</h2>
+        <ul>
+            <li>Origine des données : les sites et applications officielles du festival (https://www.welovegreen.fr/)</li>
+            <li>Source des images : les images utilisées proviennent du site officiel du festival (https://www.welovegreen.fr/)</li>
+            <li>Technologies utilisées : <a href="https://astro.build/" target="_blank" rel="noopener noreferrer">Astro</a></li>
+            <li><a href="https://github.com/sebaseg-dev" target="_blank" rel="noopener noreferrer">Code en source ouverte disponible sur GitHub</a></li>
+        </ul>
+        <h2>Côté légal</h2>
+        <h3>Données personnelles</h3>
+        <p>
+            Cette app ne stocke aucune de vos infos, aucune donnée personnelle, aucun cookie... C'est la meilleure protection (et de toute façon, je ne saurais pas quoi faire de vos données 🤭).
+        </p>
+        <p>
+            Pas de pub, pas de newsletter, ou que sais-je non plus.
+        </p>
+        <h3>Accessibilité</h3>
+        <p>
+            Malgré les efforts menés pour rendre l'app la plus inclusive possible, i ls'agit d'un petit projet personnel. À ce titre, et à date de démarrage du festival, je n'ai pas assez de temps pour faire un audit d'accessibilité en bonne et due forme. Pour toute requête liée à l'accessibilité, je serais ravi de vous répondre par e-mail <a href="mailto:alt-wlg-2026@sebaseg.fr">alt-wlg-2026@sebaseg.fr</a>.
+        </p>
+        <h3>Mentions légales</h3>
+        <p>
+            Le site alt-wlg-2026.sebaseg.fr est édité par sebaseg, immatriculée au RCS de Paris sour le numéro SIRET 103 282 257 00015, sise 173 rue de Courcelles, 75017 Paris, <a href="mailto:alt-wlg-2026@sebaseg.fr">alt-wlg-2026@sebaseg.fr</a>.
+        </p>
+        <p>
+            Le site alt-wlg-2026.sebaseg.fr est hébergé par OVH SAS, 2 rue Kellerman, 59100 Roubaix, ovhcloud.com.
+        </p>
+        <p>
+            La direction de la publication est assurée par Sebastien Seguin, <a href="mailto:alt-wlg-2026@sebaseg.fr">alt-wlg-2026@sebaseg.fr</a>.
+        </p>
+    </div>
 </Layout>
