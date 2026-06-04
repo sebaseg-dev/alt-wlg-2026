@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.58154835"
-     inkscape:cx="1404.8703"
-     inkscape:cy="404.95343"
+     inkscape:zoom="0.42288186"
+     inkscape:cx="2348.1736"
+     inkscape:cy="999.09701"
      inkscape:window-width="1712"
      inkscape:window-height="990"
      inkscape:window-x="0"
      inkscape:window-y="39"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g6" />
+     inkscape:current-layer="g25" />
   <defs
      id="defs1">
     <rect
@@ -92,6 +92,161 @@
            x="260.91595"
            y="76.954483"
            id="tspan6">GREEN</tspan></text>
+      <g
+         id="g19"
+         inkscape:export-filename="../astro/public/icon-512x512.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <rect
+           style="display:inline;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect3"
+           width="135.46666"
+           height="135.46667"
+           x="260.08392"
+           y="198.84619"
+           ry="0"
+           rx="0"
+           inkscape:export-filename="../astro/src/icon-192x192.png"
+           inkscape:export-xdpi="36"
+           inkscape:export-ydpi="36" />
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect4"
+           width="108.12647"
+           height="104.39828"
+           x="273.75403"
+           y="214.38039"
+           ry="0"
+           rx="0"
+           inkscape:export-filename="../astro/src/icon-192x192.png"
+           inkscape:export-xdpi="36"
+           inkscape:export-ydpi="36" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';text-align:start;letter-spacing:-5.29167px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           x="273.47537"
+           y="255.93134"
+           id="text6-0"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:57.15px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-5.29167px;direction:ltr;fill:#424242;fill-opacity:1;stroke-width:0.999999"
+             x="273.47537"
+             y="255.93134"
+             id="tspan6-2">ALT</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#424242;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           x="271.96338"
+           y="318.47388"
+           id="text4"><tspan
+             sodipodi:role="line"
+             id="tspan18"
+             x="271.96338"
+             y="318.47388">Green</tspan></text>
+        <g
+           id="g18"
+           transform="translate(-3.7713526,-0.05415324)">
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#424242;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+             x="289.90845"
+             y="291.19437"
+             id="text13"><tspan
+               sodipodi:role="line"
+               id="tspan17"
+               x="289.90845"
+               y="291.19437">Love</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.05px;line-height:0px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:-2.02935px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#424242;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+             x="-292.099"
+             y="289.83676"
+             id="text16"
+             transform="rotate(-90)"><tspan
+               sodipodi:role="line"
+               id="tspan16"
+               x="-292.099"
+               y="289.83676"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-2.02935px;writing-mode:lr-tb;direction:ltr;fill:#424242;fill-opacity:1">We</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g24"
+         inkscape:export-filename="../astro/public/icon-512x512.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         transform="translate(221.48621,-108.8661)">
+        <rect
+           style="display:inline;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect19"
+           width="135.46666"
+           height="135.46667"
+           x="260.08392"
+           y="198.84619"
+           ry="0"
+           rx="0"
+           inkscape:export-filename="../astro/public/favicon.svg"
+           inkscape:export-xdpi="5.9999986"
+           inkscape:export-ydpi="5.9999986" />
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect20"
+           width="108.12647"
+           height="104.39828"
+           x="273.75403"
+           y="214.38039"
+           ry="0"
+           rx="0"
+           inkscape:export-filename="../astro/src/icon-192x192.png"
+           inkscape:export-xdpi="36"
+           inkscape:export-ydpi="36" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:38.1px;line-height:0px;font-family:Barlow;-inkscape-font-specification:'Barlow, Bold';text-align:start;letter-spacing:-5.29167px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999998;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           x="273.47534"
+           y="287.35501"
+           id="text20"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:57.15px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-5.29167px;direction:ltr;fill:#424242;fill-opacity:1;stroke-width:0.999999"
+             x="273.47534"
+             y="287.35501"
+             id="tspan20">ALT</tspan></text>
+      </g>
+      <g
+         id="g25"
+         inkscape:export-filename="../astro/public/icon-512x512.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"
+         transform="translate(400.42705,-107.61477)">
+        <rect
+           style="display:inline;fill:#fbf9f8;fill-opacity:1;stroke-width:0.999995;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect24"
+           width="135.46666"
+           height="135.46667"
+           x="260.08392"
+           y="198.84619"
+           ry="0"
+           rx="0"
+           inkscape:export-filename="../astro/public/favicon.svg"
+           inkscape:export-xdpi="5.9999986"
+           inkscape:export-ydpi="5.9999986" />
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke-width:0.999994;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           id="rect25"
+           width="108.12647"
+           height="104.39828"
+           x="273.75403"
+           y="214.38039"
+           ry="0"
+           rx="0"
+           inkscape:export-filename="../astro/src/icon-192x192.png"
+           inkscape:export-xdpi="36"
+           inkscape:export-ydpi="36" />
+        <path
+           style="font-weight:bold;font-size:57.15px;line-height:0px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';letter-spacing:-5.29167px;fill:#424242;stroke-width:0.999999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+           d="m 317.175,287.35501 h -11.07839 l -2.87425,-8.39949 h -15.40371 l -2.87424,8.39949 h -10.79934 l 15.3479,-41.55095 h 12.33413 z m -16.54783,-16.01763 -5.10666,-14.90141 -5.10667,14.90141 z m 47.19815,16.01763 h -29.97026 v -41.55095 h 10.71562 v 33.51423 h 19.25464 z m 33.66409,-33.51423 h -12.97595 v 33.51423 h -10.71563 v -33.51423 h -12.97595 v -8.03672 h 36.66753 z"
+           id="text25"
+           aria-label="ALT" />
+      </g>
     </g>
   </g>
 </svg>

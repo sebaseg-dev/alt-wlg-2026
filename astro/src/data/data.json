@@ -823,11 +823,74 @@
                 "name": "THINKTANK",
                 "lineup": [
                     {
-                        "id": "conferences_20260606",
-                        "artist": "CONFÉRENCES",
-                        "start_time": "14:00",
+                        "id": "podcast_histoires_crepues",
+                        "artist": "PODCAST HISTOIRES CRÉPUES",
+                        "start_time": "14:15",
+                        "end_time": "15:00",
+                        "description": "Seumboy VRAINOM, Reha SIMON et Manon AHANDA seront présents pour raconter ce que signifie être un média antiraciste et décolonial, porté par des personnes concernées. On discutera aussi des conditions dans lesquelles ces récits sont produits et de la manière de raconter ces histoires sans reproduire les cadres qui les limitent.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "riposte_drag",
+                        "artist": "RIPOSTE DRAG",
+                        "start_time": "15:00",
+                        "end_time": "15:30",
+                        "description": "À l’heure où la violence réactionnaire s’abat sur la communauté LGBTQI+, comment résister ? Sur la scène des luttes queers, les artistes drag occupent aujourd’hui un rôle central. Nous serons avec Mami Watta, gagnante de Drag Race France All-Stars, Piche, candidate à l’émission et rappeuse à succès, Apolline Bazin, autrice du livre « Drag Fever, sous les paillettes toujours la rage ? » pour en discuter.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "sound_of_silence",
+                        "artist": "SOUND OF SILENCE",
+                        "start_time": "15:30",
+                        "end_time": "15:45",
+                        "description": "Rodolphe Louis vit avec un handicap invisible (Charcot-Marie-Tooth) qu’il a longtemps caché. Au Think Tank, il livre un témoignage court et sincère sur ce que l’on vit en silence.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "feris_et_son_village",
+                        "artist": "FÉRIS ET SON VILLAGE",
+                        "start_time": "15:45",
+                        "end_time": "16:25",
+                        "description": "Féris Barkat vous propose d’explorer ce que signifie faire communauté aujourd’hui. Il paraît que tout un village se cache dans le public.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "personnage_principal_revolution_poetique",
+                        "artist": "PERSONNAGE PRINCIPAL + RÊVOLUTION POÉTIQUE",
+                        "start_time": "16:25",
+                        "end_time": "17:00",
+                        "description": "PERSONNAGE PRINCIPAL\nAucune description sur les sites officiels.\n\nRÊVOLUTION POÉTIQUE\nRêvolution Poétique, Vincent Avanzi un appel à la révolution mêlant supplément d’âme, harmonie avec le vivant, amour universel et émerveillement. Une invitation, au fond, à habiter le monde de manière plus poétique.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "carte_blanche",
+                        "artist": "CARTE BLANCHE",
+                        "start_time": "17:00",
+                        "end_time": "17:45",
+                        "description": "Les lanceurs d’alerte sont systématiquement menacés. Camille Étienne a décidé de nous faire rencontrer quelques-uns de ces héros de l’intérêt général.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "mener_la_bataille_culturelle_en_bd",
+                        "artist": "MENER LA BATAILLE CULTURELLE EN BD",
+                        "start_time": "17:45",
+                        "end_time": "18:15",
+                        "description": "Blanche Sabbah donne vie à un personnage de sa saga La Cité des dames en réalisant un dessin en direct.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "dinguerie_avec_amnesty",
+                        "artist": "DINGUERIE AVEC AMNESTY",
+                        "start_time": "18:15",
                         "end_time": "19:00",
-                        "description": "Aucune description sur les sites officiels.",
+                        "description": "Dans un format interactif, Mélissa Amnéris, “baddie engagée”, s’entoure de deux expertes d’Amnesty International pour décrypter et déconstruire les pires dingueries entendues dans les médias et le débat public. Entre pédagogie, humour et engagement, cette session propose de remettre les faits au centre et de donner des clés concrètes pour répondre à ces discours.",
                         "type": "talk",
                         "links": {}
                     },
@@ -836,7 +899,7 @@
                         "artist": "COMEDY CLUB",
                         "start_time": "19:00",
                         "end_time": "19:45",
-                        "description": "WE LOVE GREEN, c’est aussi un festival qui passe le micro à des humoristes engagés, qui ont trouvé par le rire une nouvelle manière d’éveiller les consciences et de sensibiliser les festivalier·ère·s.",
+                        "description": "WE LOVE GREEN, c’est aussi un festival qui passe le micro à des humoristes engagés, qui ont trouvé par le rire une nouvelle manière d’éveiller les consciences et de sensibiliser les festivalier·ère·s.\n\nPour finir le samedi en beauté, quatre humoristes prennent possession du Think Tank : Guigui Pop, Camille Giry, Basile et Olivia Dago. Une heure pour rire, souffler et clôturer la deuxième journée comme elle mérite de l'être.",
                         "type": "talk",
                         "links": {}
                     },
@@ -1259,11 +1322,56 @@
                 "name": "THINKTANK",
                 "lineup": [
                     {
-                        "id": "conferences_20260607",
-                        "artist": "CONFÉRENCES",
-                        "start_time": "14:00",
-                        "end_time": "18:45",
+                        "id": "female_gaze_book_club",
+                        "artist": "FEMALE GAZE BOOK CLUB",
+                        "start_time": "14:10",
+                        "end_time": "15:00",
                         "description": "Aucune description sur les sites officiels.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "prix_des_essais_les_inrocks",
+                        "artist": "PRIX DES ESSAIS LES INROCKS",
+                        "start_time": "15:00",
+                        "end_time": "15:30",
+                        "description": "Le Prix Essais des Inrocks récompense une pensée ancrée dans notre époque, mêlant ambition littéraire et réflexion philosophique, sociologique ou historique.\nCette année, We Love Green accueillera la remise du prix sur la scène du Think Tank, suivie d’un échange avec les président·es du jury Tristan Garcia et Kaoutar Harchi, modéré par Jean-Marie Durand, ainsi qu’avec les lauréat·es.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "le_pouvoir_des_reseaux_sociaux",
+                        "artist": "LE POUVOIR DES RÉSEAUX SOCIAUX",
+                        "start_time": "15:30",
+                        "end_time": "16:00",
+                        "description": "Charlotte Lemay et Charles Villa reviendront à l’approche des élections de 2027 sur la place des réseaux dans les batailles politiques et ce que cela dit de nos démocraties.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "duel_de_tchatche",
+                        "artist": "DUEL DE TCHATCHE",
+                        "start_time": "16:00",
+                        "end_time": "17:15",
+                        "description": "Tchatche revient sur la scène du Think Tank 2026. Plus affûté, plus incisif, plus spectaculaire que jamais ! Le principe ? Un ring transformé en arène intellectuelle. Deux esprits qui s’entrechoquent.\n\nTransition alimentaire : Comment changer sans exclure ? Avec Brigitte Gothière et Bertrand SWIDERSKI.\n\nUn futur désirable est-il soluble dans le capitalisme ? Avec Flora Ghebali et Gabriel Malek.\n\nFaut-il mourir pour être libre ? Avec Thierry Gautret de la Moricière et Edouard Dequeker",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "technofascisme",
+                        "artist": "TECHNOFASCISME",
+                        "start_time": "17:15",
+                        "end_time": "18:00",
+                        "description": "Asma Mhalla et François Saltiel croisent leurs regards pour analyser la bataille des récits à l'œuvre et l'émergence d'un techno-fascisme hybride propulsé par les BigTech.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "l_ete_de_berenice",
+                        "artist": "L'ÉTÉ DE BÉRÉNICE",
+                        "start_time": "18:00",
+                        "end_time": "18:45",
+                        "description": "Émilie Tronche nous invite à plonger dans l’univers de Samuel à travers une planche inédite, où dessin, musique et récit se rencontrent.",
                         "type": "talk",
                         "links": {}
                     },
@@ -1272,7 +1380,7 @@
                         "artist": "LES GRANDS REMPLAÇANTS",
                         "start_time": "18:45",
                         "end_time": "19:45",
-                        "description": "Aucune description sur les sites officiels.",
+                        "description": "Djamil Le Shlag, Rey Mendes, Adel Fugazi et Marine Ella prennent le micro pour questionner les contours du monde à bases de chroniques qui sonnent comme des punchlines.\n\nÉcoutez, vous êtes grand remplacé.",
                         "type": "talk",
                         "links": {}
                     },
