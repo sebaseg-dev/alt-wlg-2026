@@ -824,10 +824,91 @@
                 "lineup": [
                     {
                         "id": "conferences_20260606",
-                        "artist": "CONFÉRENCES",
-                        "start_time": "14:00",
+                        "artist": "TO REMOVE! CONFÉRENCES",
+                        "start_time": "18:00",
                         "end_time": "19:00",
                         "description": "Aucune description sur les sites officiels.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "podcast_histoires_crepues",
+                        "artist": "PODCAST HISTOIRES CRÉPUES",
+                        "start_time": "14:15",
+                        "end_time": "15:00",
+                        "description": "Seumboy VRAINOM, Reha SIMON et Manon AHANDA seront présents pour raconter ce que signifie être un média antiraciste et décolonial, porté par des personnes concernées. On discutera aussi des conditions dans lesquelles ces récits sont produits et de la manière de raconter ces histoires sans reproduire les cadres qui les limitent.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "riposte_drag",
+                        "artist": "RIPOSTE DRAG",
+                        "start_time": "15:00",
+                        "end_time": "15:30",
+                        "description": "À l’heure où la violence réactionnaire s’abat sur la communauté LGBTQI+, comment résister ? Sur la scène des luttes queers, les artistes drag occupent aujourd’hui un rôle central. Nous serons avec Mami Watta, gagnante de Drag Race France All-Stars, Piche, candidate à l’émission et rappeuse à succès, Apolline Bazin, autrice du livre « Drag Fever, sous les paillettes toujours la rage ? » pour en discuter.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "sound_of_silence",
+                        "artist": "SOUND OF SILENCE",
+                        "start_time": "15:30",
+                        "end_time": "15:45",
+                        "description": "Rodolphe Louis vit avec un handicap invisible (Charcot-Marie-Tooth) qu’il a longtemps caché. Au Think Tank, il livre un témoignage court et sincère sur ce que l’on vit en silence.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "feris_et_son_village",
+                        "artist": "FÉRIS ET SON VILLAGE",
+                        "start_time": "15:45",
+                        "end_time": "16:25",
+                        "description": "Féris Barkat vous propose d’explorer ce que signifie faire communauté aujourd’hui. Il paraît que tout un village se cache dans le public.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "personnage_principal",
+                        "artist": "PERSONNAGE PRINCIPAL",
+                        "start_time": "16:25",
+                        "end_time": "16:55",
+                        "description": "Aucune description sur les sites officiels.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "revolution_poetique",
+                        "artist": "RÊVOLUTION POÉTIQUE",
+                        "start_time": "16:55",
+                        "end_time": "17:00",
+                        "description": "Rêvolution Poétique, Vincent Avanzi un appel à la révolution mêlant supplément d’âme, harmonie avec le vivant, amour universel et émerveillement. Une invitation, au fond, à habiter le monde de manière plus poétique.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "carte_blanche",
+                        "artist": "CARTE BLANCHE",
+                        "start_time": "17:00",
+                        "end_time": "17:45",
+                        "description": "Les lanceurs d’alerte sont systématiquement menacés. Camille Étienne a décidé de nous faire rencontrer quelques-uns de ces héros de l’intérêt général.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "mener_la_bataille_culturelle_en_bd",
+                        "artist": "MENER LA BATAILLE CULTURELLE EN BD",
+                        "start_time": "17:45",
+                        "end_time": "18:15",
+                        "description": "Blanche Sabbah donne vie à un personnage de sa saga La Cité des dames en réalisant un dessin en direct.",
+                        "type": "talk",
+                        "links": {}
+                    },
+                    {
+                        "id": "dinguerie_avec_amnesty",
+                        "artist": "DINGUERIE AVEC AMNESTY",
+                        "start_time": "18:15",
+                        "end_time": "19:00",
+                        "description": "Dans un format interactif, Mélissa Amnéris, “baddie engagée”, s’entoure de deux expertes d’Amnesty International pour décrypter et déconstruire les pires dingueries entendues dans les médias et le débat public. Entre pédagogie, humour et engagement, cette session propose de remettre les faits au centre et de donner des clés concrètes pour répondre à ces discours.",
                         "type": "talk",
                         "links": {}
                     },
@@ -836,7 +917,7 @@
                         "artist": "COMEDY CLUB",
                         "start_time": "19:00",
                         "end_time": "19:45",
-                        "description": "WE LOVE GREEN, c’est aussi un festival qui passe le micro à des humoristes engagés, qui ont trouvé par le rire une nouvelle manière d’éveiller les consciences et de sensibiliser les festivalier·ère·s.",
+                        "description": "WE LOVE GREEN, c’est aussi un festival qui passe le micro à des humoristes engagés, qui ont trouvé par le rire une nouvelle manière d’éveiller les consciences et de sensibiliser les festivalier·ère·s.\n\nPour finir le samedi en beauté, quatre humoristes prennent possession du Think Tank : Guigui Pop, Camille Giry, Basile et Olivia Dago. Une heure pour rire, souffler et clôturer la deuxième journée comme elle mérite de l'être.",
                         "type": "talk",
                         "links": {}
                     },
