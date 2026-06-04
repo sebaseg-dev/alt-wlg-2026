@@ -823,15 +823,6 @@
                 "name": "THINKTANK",
                 "lineup": [
                     {
-                        "id": "conferences_20260606",
-                        "artist": "TO REMOVE! CONFÉRENCES",
-                        "start_time": "18:00",
-                        "end_time": "19:00",
-                        "description": "Aucune description sur les sites officiels.",
-                        "type": "talk",
-                        "links": {}
-                    },
-                    {
                         "id": "podcast_histoires_crepues",
                         "artist": "PODCAST HISTOIRES CRÉPUES",
                         "start_time": "14:15",
@@ -868,20 +859,11 @@
                         "links": {}
                     },
                     {
-                        "id": "personnage_principal",
-                        "artist": "PERSONNAGE PRINCIPAL",
+                        "id": "personnage_principal_revolution_poetique",
+                        "artist": "PERSONNAGE PRINCIPAL + RÊVOLUTION POÉTIQUE",
                         "start_time": "16:25",
-                        "end_time": "16:55",
-                        "description": "Aucune description sur les sites officiels.",
-                        "type": "talk",
-                        "links": {}
-                    },
-                    {
-                        "id": "revolution_poetique",
-                        "artist": "RÊVOLUTION POÉTIQUE",
-                        "start_time": "16:55",
                         "end_time": "17:00",
-                        "description": "Rêvolution Poétique, Vincent Avanzi un appel à la révolution mêlant supplément d’âme, harmonie avec le vivant, amour universel et émerveillement. Une invitation, au fond, à habiter le monde de manière plus poétique.",
+                        "description": "Aucune description sur les sites officiels.",
                         "type": "talk",
                         "links": {}
                     },
