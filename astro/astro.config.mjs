@@ -16,6 +16,8 @@ export default defineConfig({
                 background_color: '#111111',
                 display: 'standalone',
                 orientation: 'portrait',
+                start_url: '/',
+                scope: '/',
                 icons: [
                     {
                         src: '/icon-192x192.png',
@@ -34,7 +36,7 @@ export default defineConfig({
                 clientsClaim: true,
                 cleanupOutdatedCaches: true,
                 globPatterns: ['**/*.{js,css,html,svg,png,ico,txt}'],
-                navigateFallback: '/',
+                navigateFallback: '/index.html',
                 // runtimeCaching: [
                 //     {
                 //         urlPattern: /\/data\.json/,
