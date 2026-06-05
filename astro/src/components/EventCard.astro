@@ -7,7 +7,7 @@ interface Props {
 	event: EnrichedEvent;
 }
 ---
-<a href={`/event/${event.id}`}>
+<a href={`/event/${event.id}/`}>
     <div class={`event-card scene-${event.sceneIndex}`}>
         <div class="event-title">{event.artist}</div>
         <div>{event.dateLabel} de {event.start_time} à {event.end_time}</div>
