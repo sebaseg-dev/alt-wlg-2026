@@ -4,6 +4,10 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+    trailingSlash: 'always',
+    build: {
+        format: 'directory',
+    },
     integrations: [
         AstroPWA({
             registerType: 'autoUpdate',
@@ -37,6 +41,7 @@ export default defineConfig({
                 cleanupOutdatedCaches: true,
                 globPatterns: ['**/*.{js,css,html,svg,png,ico,txt}'],
                 navigateFallback: '/index.html',
+                directoryIndex: 'index.html',
                 // runtimeCaching: [
                 //     {
                 //         urlPattern: /\/data\.json/,
