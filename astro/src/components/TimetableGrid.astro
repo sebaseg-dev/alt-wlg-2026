@@ -21,10 +21,19 @@ const scenes = dayData.scenes.map(scene => scene.name);
 
 ---
 
-<div>
-    <p>Ouverture des portes : {openingTime} </p>
-    <p>Fin du dernier concert : {closingTime}</p>
-    <p>Dernier métro : {dayData.last_metro}</p>
+<div class="general-hours">
+    <div class="hours">
+        <div>▶️</div>
+        <div>{openingTime}</div>
+    </div>
+    <div class="hours">
+        <div>⏹️</div>
+        <div>{closingTime}</div>
+    </div>
+    <div class="hours">
+        <div>Ⓜ️</div>
+        <div>{dayData.last_metro}</div>
+    </div>
 </div>
 
 <div class="timetable-wrapper">
@@ -55,6 +64,21 @@ const scenes = dayData.scenes.map(scene => scene.name);
 <style>
     a {
         display: block;
+    }
+
+    .general-hours {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 16px;
+
+        & > .hours {
+            display: flex;
+            flex-direction: column;
+
+            & > div {
+                text-align: center;
+            }
+        }
     }
     
     .timetable-wrapper {
