@@ -23,6 +23,9 @@ const { PUBLIC_UMAMI_WEBSITE_ID } = import.meta.env;
 		<title>{title}</title>
 		<meta name="theme-color" content="#111111" />
 		<link rel="manifest" href="/manifest.webmanifest" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="alt wlg 26">
 		<link rel="apple-touch-icon" href="/icon-192x192.png" />
 		{ PUBLIC_UMAMI_WEBSITE_ID && 
 		    <script defer src="https://umami.sebaseg.fr/script.js" data-website-id={PUBLIC_UMAMI_WEBSITE_ID}></script> 
