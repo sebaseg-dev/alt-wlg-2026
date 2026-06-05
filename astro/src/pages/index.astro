@@ -8,7 +8,18 @@ let lastRenderedDate = "";
 ---
 
 <Layout title="lineup">
-
+    <div id="install-banner" class="install-card" style="display: none;">
+        <div id="android-prompt" style="margin: 8px; display: none;">
+            <h2>Installer l'application</h2>
+            <p>Accédez aux horaires même sans réseau au milieu du festival !</p>
+            <button id="install-button">Installer</button>
+        </div>
+        <div id="ios-prompt" style="margin: 8px; display: none;">
+            <h2>Installer l'application</h2>
+            <p>Appuyez sur le bouton <strong>Partager</strong> et choisissez <strong>"Sur l'écran d'accueil"</strong>.</p>
+        </div>
+    </div>
+    
     <div class="scrollable-content">
         {allEvents.map((event) => {
             const newDay = event.date !== lastRenderedDate;
@@ -21,41 +32,74 @@ let lastRenderedDate = "";
         })}
     </div>
     
-
     <script is:inline>
-        // Écoute l'événement beforeinstallprompt (nécessaire pour l'installation)
         let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // Empêche Chrome de masquer automatiquement le prompt
-            e.preventDefault();
-            // Stocke l'événement pour plus tard
-            deferredPrompt = e;
-            console.log('📱 PWA installable ! beforeinstallprompt déclenché.');
-        
-            // Affiche un bouton manuel pour tester (optionnel)
-            const installButton = document.createElement('button');
-            installButton.textContent = 'Installer l\'app';
-            installButton.style.position = 'fixed';
-            installButton.style.bottom = '20px';
-            installButton.style.right = '20px';
-            installButton.style.zIndex = '9999';
-            installButton.addEventListener('click', () => {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('🎉 Utilisateur a accepté l\'installation !');
-                    } else {
-                        console.log('❌ Utilisateur a refusé l\'installation.');
-                    }
-                    deferredPrompt = null;
+        const banner = document.getElementById('install-banner');
+        const androidPrompt = document.getElementById('android-prompt');
+        const iosPrompt = document.getElementById('ios-prompt');
+        const installBtn = document.getElementById('install-button');
+    
+        // 1. Détection de l'état "Déjà installé"
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    
+        if (!isStandalone) {
+            // 2. Détection iOS
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+            if (isIOS) {
+                // Sur iOS : on affiche directement les instructions
+                banner.style.display = 'block';
+                iosPrompt.style.display = 'block';
+            } else {
+                // Sur Android/Chrome : on attend l'événement système
+                window.addEventListener('beforeinstallprompt', (e) => {
+                    e.preventDefault();
+                    deferredPrompt = e;
+                    banner.style.display = 'block';
+                    androidPrompt.style.display = 'block';
                 });
+            }
+        }
+    
+        // 3. Gestion du clic sur le bouton Android
+        if (installBtn) {
+            installBtn.addEventListener('click', async () => {
+                if (!deferredPrompt) return;
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    banner.style.display = 'none';
+                }
+                deferredPrompt = null;
             });
-            document.body.appendChild(installButton);
-        });
+        }
         
-        // Vérifie si l'app est déjà installée
-        window.addEventListener('appinstalled', (evt) => {
-            console.log('✅ App installée avec succès !');
+        // 4. On cache si l'installation réussit
+        window.addEventListener('appinstalled', () => {
+            banner.style.display = 'none';
         });
     </script>
 </Layout>
+
+<style>
+    .install-card {
+        background-color: var(--appBackgroundColor);
+        color: var(--lightTextColor);
+        border-radius: 8px;
+
+        & h2, p {
+            margin: 0;
+            margin-bottom: 8px;
+        }
+    }
+
+    #install-button {
+        display: block;
+        margin-left: auto;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--bodyBackgroundColor);
+        color: var(--textColor);
+        padding: 4px 8px;
+    }
+</style>
